@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.p-sub-dropdown__boxs{
+  display: flex;
+  gap: vw(375,3);
+  @include mq("md") {
+    gap: rem(18);
+  }
+}
+
+
+

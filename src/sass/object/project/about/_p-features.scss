@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.p-features{
+  padding-bottom: rem(60);
+  @include mq("md") {
+    padding-bottom: rem(130);
+  }
+}
+
+.p-features__title__box{
+  text-align: center;
+}
+
+.p-features__cards{
+  display: grid;
+  margin-top: rem(40);
+  gap: rem(50);
+  @include mq("md") {
+    gap: rem(100);
+    margin-top: rem(54);
+  }
+}

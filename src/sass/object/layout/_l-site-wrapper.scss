@@ -1,0 +1,20 @@
+@use "global" as *;
+
+.l-site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: $white;
+  main {
+    flex: 1;
+  }
+}
+
+.l-site-wrapper.l-site-wrapper--bg{
+  background-image: url(".././images/common/site-bg.png");
+}
+
+.l-site-wrapper.l-site-wrapper--beige{
+  background-color: $beige;
+}

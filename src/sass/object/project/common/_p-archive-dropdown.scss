@@ -1,0 +1,56 @@
+@use "global" as *;
+
+.p-archive-dropdown{
+  border-radius: 30px;
+  background-color: $white;
+  padding: rem(30) rem(10);
+  @include mq("md") {
+    padding: rem(50) rem(211);
+  }
+}
+
+.p-archive-dropdown__boxs{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: rem(50);
+}
+
+.p-archive-dropdown__box{
+  display: grid;
+  gap: rem(10);
+  @include mq("md") {
+    gap: rem(18);
+  }
+}
+
+.p-archive-dropdown__title-box{
+  display: flex;
+  align-items: start;
+  gap: rem(3);
+  @include mq("md") {
+    gap: rem(18);
+  }
+}
+
+.p-archive-dropdown__ja-title{
+  font-weight: $bold;
+  line-height: 1; 
+  font-size: rem(14);
+  @include mq("md") {
+    font-size: rem(18);
+  }
+}
+
+.p-archive-dropdown__en-title{
+  color: $brown;
+  font-family: lato, sans-serif;;
+  font-weight: $bold;
+  line-height: 1.2; 
+  letter-spacing: 0.56px;
+  font-size: rem(13);
+  @include mq("md") {
+    font-size: rem(14);
+  }
+}
+

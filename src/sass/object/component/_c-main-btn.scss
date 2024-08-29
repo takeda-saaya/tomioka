@@ -1,0 +1,46 @@
+@use "global" as *;
+
+.c-main-btn {
+  display: flex;
+  justify-content: center;
+  color: $white;
+  background-color: $red;
+  font-family: fot-tsukuardgothic-std, sans-serif;;
+  font-weight: $bold;
+  line-height:1;
+  border-radius: 70px;
+  background-image: url(".././images/common/arrow-red.png");
+  background-repeat: no-repeat;
+  border: 1px solid currentColor;
+  transition: all 0.3s;
+  font-size: rem(16);
+  width: rem(220);
+  padding: rem(15) rem(22) rem(15) rem(10);
+  background-size: rem(15);
+  background-position: right rem(10) center;
+  @include mq("md") {
+    background-size: rem(24);
+    background-position: right rem(20) center;
+    width: rem(264);
+    padding: rem(23) rem(44) rem(23) rem(20);
+    font-size: rem(18);
+  }
+}
+
+.c-main-btn:hover {
+  background-color: $white;
+  color: $red;
+  background-image: url(".././images/common/arrow-white.png");
+}
+
+.c-main-btn.c-main-btn--brown {
+  background-color: $brown;
+  background-image: url(".././images/common/arrow-brown.png");
+  border: 1px solid currentColor;
+}
+
+.c-main-btn--brown:hover{
+  background-color: $white;
+  color: $brown;
+  background-image: url(".././images/common/arrow-white2.png");
+}

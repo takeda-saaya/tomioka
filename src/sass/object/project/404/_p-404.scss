@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.p-404mv__img{
+  width: 100%;
+  height: vw(375,231);
+  @include mq("md") {
+    height: vw($full,500);
+  }
+}
+
+.p-404mv__img img{
+  height: 100%;
+}
+
+.p-404__body{
+  padding: rem(50);
+  @include mq("md") {
+    padding: rem(100) 0;
+  }
+}
+
+.p-404__text{
+  text-align: center;
+  @include mq("md") {
+    font-size: vw($full,30);
+  }
+}

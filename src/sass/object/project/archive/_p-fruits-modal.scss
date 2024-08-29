@@ -1,0 +1,213 @@
+@use "global" as *;
+
+.p-fruits-modal {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  z-index: 10;
+  overflow: auto; 
+  overscroll-behavior-y: none;
+  border: none;
+  background-color: $white;
+  border-radius: 30px;
+  @include mq("md") {
+    background-color: transparent;
+    }
+  &::backdrop{
+    background:rgba(0,0,0,0.5);
+  }
+}
+
+.p-fruits-modal__wrap{
+  position: relative;
+  background: $white;
+  box-shadow: -7px 8px 8px 0px rgba(195, 146, 94, 0.04);
+  border-radius: 74px;
+  @include mq("md") {
+    max-width: min(vw($full,1100));
+    padding: min(vw($full,76),rem(76)) min(vw($full,80),rem(80)) min(vw($full,60),rem(60)) min(vw($full,90),rem(90));
+  }
+}
+
+.p-fruits-modal__wrap::before{
+  position: absolute;
+  content: "";
+  background-image: url(".././images/common/tag.png");
+  background-size: contain; 
+  background-position: center;
+  width: rem(42);
+  height: rem(53);
+  aspect-ratio: 42/53;
+  top: rem(-18);
+  right: 0;
+  z-index: 10;
+  @include mq("md") {
+    width: rem(83);
+    height: rem(103);
+    aspect-ratio: 83/103;
+    top: rem(-36);
+    right: rem(-14);
+  }
+}
+
+.p-fruits-modal__body{
+  @include mq("md") {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: min(vw($full,60),rem(60));
+    align-items: center;
+  }
+}
+
+.p-fruits-modal__content{
+  text-align: center;
+  @include mq("md") {
+    width: 41%;
+    text-align-last: left;
+  }
+}
+
+.p-fruits-modal__img{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  border: 5px solid $brown;
+  background: $white;
+  padding: rem(30);
+  @include mq("md") {
+    width: min(vw($full,489),rem(489));
+    height: min(vw($full,489),rem(489));
+    padding:  min(vw($full,137),rem(137)) rem(10) min(vw($full,122),rem(122)) rem(10);
+  }
+}
+
+.p-fruits-modal__img img{
+  width: rem(100);
+  aspect-ratio: 100/97;
+  @include mq("md") {
+    width: rem(233);
+    aspect-ratio: 233/228;
+  }
+}
+
+.p-fruits-modal__name {
+  color: $red;
+  font-weight: $medium;
+  line-height: 1; 
+  letter-spacing: 0.32px;
+  position: relative;
+  display: inline-block;
+  padding: 0 rem(34) 0 rem(34);
+}
+
+.p-fruits-modal__name::before ,
+.p-fruits-modal__name::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: rem(24);
+    height: 1px;
+    background-color: $red; 
+  }
+
+.p-fruits-modal__name::before {
+  left: rem(24);
+  transform: translateX(-100%);
+}
+
+.p-fruits-modal__name::after {
+  right: rem(24);
+  transform: translateX(100%);
+}
+
+.p-fruits-modal__title{
+  color: $red;
+  font-family: $second-font-family;
+  line-height: 1; 
+  letter-spacing: 1.2px;
+  @include mq("md") {
+    margin-top: rem(20);
+    font-size: min(vw($full,60),rem(60));
+  }
+}
+
+.p-fruits-modal__explanation{
+  font-weight: $medium;
+  line-height: 1.8;
+  letter-spacing: 0.32px;
+  margin-top: rem(20);
+  @include mq("md") {
+    margin-top: rem(24);
+  }
+}
+
+.p-fruits-modal__btn{
+  display: flex;
+  justify-content: center;
+  margin: rem(30);
+  @include mq("md") {
+    margin-top: rem(60);
+  }
+}
+
+.p-fruits-modal__details {
+  display: flex;
+  flex-direction: column;
+  margin-top: rem(30);
+  gap: rem(4);
+  @include mq("md") {
+    margin-top: rem(34);
+  }
+}
+
+.p-fruits-modal__detail {
+  background-color: $beige;
+  display: flex;
+  align-items: center;
+  @include mq("md") {
+    gap: rem(28);
+    padding: rem(10) rem(32) rem(10) rem(18);
+    width: rem(227);
+  }
+}
+
+.p-fruits-modal__label {
+  font-weight: $medium;
+  line-height: 1; 
+  letter-spacing: 0.32px;
+  width: 43%;
+  padding: rem(5);
+  font-size: rem(14);
+  @include mq("md") {
+    font-size: rem(16);
+    width: 37%;
+    padding: 0;
+  }
+}
+
+.p-fruits-modal__season{
+  font-weight: $bold;
+  line-height: 1; 
+  letter-spacing: 0.32px;
+  @include mq("md") {
+    font-size: rem(16);
+  }
+}
+
+.p-fruits-modal__rounds {
+  display: flex;
+  gap: rem(5);
+  @include mq("md") {
+    gap: rem(6);
+  }
+}
+
+.p-fruits-modal__round {
+  display: inline-block;
+  background-color: $brown; 
+  border-radius: 50%;
+  width: rem(9);
+  height: rem(9);
+}

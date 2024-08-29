@@ -1,0 +1,29 @@
+@use "global" as *;
+
+
+.p-news{
+  background-color: $white;
+  padding: rem(91) 0 rem(80);
+  @include mq("md") {
+    padding: rem(180) 0 rem(100);
+  }
+}
+
+.p-news__cards{
+  display: grid;
+  gap: rem(34);
+  margin-top: rem(30);
+  @include mq("md") {
+    grid-template-columns:1fr 1fr; ;
+    gap: rem(64);
+    row-gap: rem(64);
+    margin-top: rem(64);
+  }
+}
+
+.p-news__title__box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

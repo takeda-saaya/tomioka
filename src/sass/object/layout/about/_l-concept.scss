@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.l-concept{
+  position: relative;
+  margin-top: rem(80);
+  margin-bottom: rem(40);
+  @include mq("md") {
+    margin-top: rem(155);
+    margin-bottom: rem(92);
+  }
+}

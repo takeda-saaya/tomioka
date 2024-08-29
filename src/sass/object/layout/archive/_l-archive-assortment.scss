@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.l-archive-assortment{
+  margin-top: rem(80);
+  @include mq("md") {
+    margin-top: rem(129);
+  }
+}

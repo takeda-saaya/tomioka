@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.p-delivery-modal{
+  position: fixed;
+  top: 0;
+  inset: 0;
+  padding: rem(108) 0 rem(80);
+  border: none;
+  background-color: transparent;
+  margin-inline: auto;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.p-delivery-modal::-webkit-scrollbar {
+  display:none;
+  @include mq("md") {
+    padding: rem(240) 0 rem(211);
+    }
+  }
+
+.p-delivery-modal::backdrop {
+  background: rgba(0,0,0,0.5);
+}
+
+.p-delivery-modal__boxs{
+  display: grid;
+  gap: rem(20);
+}

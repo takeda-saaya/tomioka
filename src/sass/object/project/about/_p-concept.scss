@@ -1,0 +1,257 @@
+@use "global" as *;
+
+.p-concept{
+  background-color: $red;
+  @include mq("md") {
+    padding: rem(14) 0 0;
+  }
+}
+
+.p-concept::before ,
+.p-concept::after {
+  position: absolute;
+  content: "";
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include mq("md") {
+  }
+}
+
+.p-concept::before {
+  background-image: url(".././images/about/concept-bg-top.png");
+  background-position: top left;
+  width: 100%;
+  height: rem(80);
+  top: rem(-80);
+  right: 0;
+  @include mq("md") {
+    height: rem(155);
+    top: rem(-155);
+  }  
+}
+
+.p-concept::after {
+  background-image: url(".././images/about/concept-bg-bottom.png");
+  background-position: bottom;
+  height: rem(40);
+  bottom: rem(-40);
+  width: 100%;
+  right: 0;
+  @include mq("md") {
+    height: rem(92);
+    bottom: rem(-92);
+  }
+}
+
+.p-concept__inner{
+  padding: 0;
+}
+
+.p-concept__title__box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.p-concept__body{
+  position: relative;
+  margin-top: rem(40);
+  padding-bottom: rem(50);
+  @include mq("md") {
+    width: min(vw($full,1100),rem(1100));
+    margin-top: rem(54);
+    margin-inline: auto;
+    padding-bottom: min(vw($full,225),rem(225));
+  }
+}
+
+.p-concept__body::after,
+.p-concept__body::before{
+  position: absolute; 
+  content: '';
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+
+.p-concept__body::after{
+  background-image: url(".././images/about/concept__img-deco3.png");
+  width: vw(375,42);
+  height: vw(375,53);
+  aspect-ratio: 42/53;
+  top: min(vw(375,127),rem(190));
+  right: 0;
+  z-index: 10;
+  @include mq("md") {
+    width: min(vw($full,202),rem(202));
+    height: min(vw($full,137),rem(137));
+    aspect-ratio: 202/137;
+    transform: rotate(-1.787deg);
+    top: min(vw($full,432),rem(432));
+    right: min(vw($full,-55),rem(-55));
+  }
+}
+
+.p-concept__body::before{
+  background-image: url(".././images/about/concept__img-deco4.png");
+  width: min(vw(375,42),rem(84));
+  height: min(vw(375,53),rem(106));
+  aspect-ratio: 42/53;
+  top: min(vw(375,98),rem(159));
+  right: 0;
+  @include mq("md") {
+    width: min(vw($full,138),rem(138));
+    height: min(vw($full,127),rem(127));
+    aspect-ratio: 138/127;
+    transform: rotate(3.835deg);
+    top: min(vw($full,405),rem(405));
+    right: min(vw($full,15),rem(15));
+  }
+}
+
+.p-concept__img{
+  width: 100%;
+  max-width: vw(375,350);
+  margin-inline: auto;
+  @include mq("md") {
+    max-width: min(vw($full,1100),rem(1100));
+    aspect-ratio: 1100/530;
+  }
+}
+
+.p-concept__img,
+.p-concept__img img{
+  position: relative;
+  height: auto;
+}
+
+.p-concept__img::after,
+.p-concept__img::before{
+  position: absolute; 
+  content: '';
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.p-concept__img::after{
+  background-image: url(".././images/about/concept__img-deco1.png");
+  width: vw(375,42);
+  height: vw(375,53);
+  aspect-ratio: 42/53;
+  top: vw(375,-18);
+  left: 0;
+  @include mq("md") {
+    width: min(vw($full,116),rem(116));
+    height: min(vw($full,107),rem(107));
+    aspect-ratio: 116/107;
+    transform: rotate(-14.497deg);
+    top: min(vw($full,-25),rem(-25));
+    left: min(vw($full,-42),rem(-42));
+  }
+}
+
+.p-concept__img::before{
+  background-image: url(".././images/about/concept__img-deco2.png");
+  width: vw(375,48);
+  height: vw(375,44);
+  aspect-ratio: 48/44;
+  left: 0;
+  top: vw(375,-56);
+  @include mq("md") {
+    width: min(vw($full,138),rem(138));
+    height: min(vw($full,129),rem(129));
+    aspect-ratio: 138/129;
+    transform: rotate(-3.3deg);
+    top: min(vw($full,-141),rem(-141));
+    left: min(vw($full,21),rem(21));
+  }
+}
+
+
+.p-concept__text-box{
+  position: relative;
+  z-index: 10;
+  @include mq("md") {
+    margin-top: min(vw($full,66),rem(66));
+  }
+}
+
+.p-concept__text-box::after{
+  position: absolute; 
+  content: '';
+  background-size: contain; 
+  background-position: top;
+  background-repeat: no-repeat;
+  z-index: -1;
+  background-image: url(".././images/about/concept__text-bg.png");
+  width: 100%;
+  height: 350px;
+  top: vw(375,-35);
+  left: 0;
+  @include mq("md") {
+    background-size: cover; 
+    width: min(vw($full,1100),rem(1100));
+    height: min(vw($full,875),rem(875));
+    aspect-ratio: 116/107;
+    top: rem(-176);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.p-concept__sub-title{
+  color: $red;
+  font-family: fot-tsukuardgothic-std, sans-serif;
+  font-weight: $bold;
+  line-height: 1; 
+  letter-spacing: 2.8px;
+  text-align: center;
+  font-size: rem(35);
+@include mq("md") {
+  font-size: min(vw($full,70),rem(70));
+  }
+}
+
+.p-concept__texts{
+  margin-top: min(vw(375,20),rem(33));
+  @include mq("md") {
+    margin-top: min(vw($full,51),rem(51));
+  } 
+}
+
+.p-concept__text{
+  text-align: center;
+  font-weight: $medium;
+  line-height: 1.5;
+  margin-top: rem(5);
+  font-size: rem(10);
+  @include mq("md") {
+    line-height: 2;
+    font-size: min(vw($full,18),rem(18));
+    margin-top: 0;
+  }
+}
+
+.p-concept__text:not(:first-of-type){
+  @include mq("md") {
+    margin-top: min(vw($full,20),rem(20));
+  }
+}
+
+.p-concept__name{
+  font-family:  fot-tsukuardgothic-std, sans-serif;
+  font-weight: $bold;
+  line-height: 1; 
+  letter-spacing: 0.8px;
+  text-align: center;
+  margin-top: min(vw(375,20),rem(33));
+  @include mq("md") {
+    font-size: min(vw($full,20),rem(20));
+    margin-top: min(vw($full,51),rem(51));
+  }
+}

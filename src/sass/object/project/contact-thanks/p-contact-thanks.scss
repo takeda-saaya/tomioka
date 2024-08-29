@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.p-contact-thanks{
+  padding-bottom: rem(60);
+  @include mq("md") {
+    padding-bottom: rem(80);
+  }
+}
+
+.p-contact-thanks__text{
+  text-align: center;
+  @include mq("md") {
+    font-size: rem(30);
+  }
+}

@@ -1,0 +1,100 @@
+@use "sass:math";
+
+// remへの計算式（16pxを基準としている。10pxを基準とする場合は16を10に変更する）
+@function rem($pixels) {
+  @return math.div($pixels, 16) * 1rem;
+}
+
+@font-face {
+    font-family: "bananaslip"; 
+    src: url("../../fonts/YDWbananaslipplus.otf") format("opentype"); 
+  }
+
+////////////////////
+// インナー幅設定
+////////////////////
+// コンテンツのインナー幅（最も共通の幅が多い部分）
+$inner: 1100px;
+
+// full
+$full: 1440;
+
+// 余白
+$padding-pc: 25px;
+$padding-sp: rem(10);
+
+////////////////////
+// フォント設定
+////////////////////
+
+$base-font-family: "Noto Sans JP", sans-serif;
+$second-font-family: "bananaslip",serif;;
+
+
+// フォントウェイト
+$light: 300;
+$normal: 400;
+$medium: 500;
+$bold: 700;
+
+////////////////////
+// 色の指定
+////////////////////
+
+$black: #000;
+$white: #fff;
+$red: #e63d48;
+$green: #009443;
+$beige: #f7efe3;
+$brown: #c3925e;
+$pink: #eb6ab7;
+
+////////////////////
+// メディアクエリとブレークポイントの設定
+////////////////////
+
+//ブレイクポイント
+$breakpoints: (
+  sm: 500,
+  md: 768,
+  mm: 840,
+  xl: 1440,
+  ll: 1600,
+);
+
+//メディアクエリー
+$mediaquerys: (
+  sm: "screen and (min-width: #{map-get($breakpoints,'sm')}px)",
+  md: "screen and (min-width: #{map-get($breakpoints,'md')}px)",
+  mm: "screen and (min-width: #{map-get($breakpoints,'mm')}px)",
+  lg: "screen and (min-width: #{map-get($breakpoints,'lg')}px)",
+  xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
+  ll: "screen and (min-width: #{map-get($breakpoints,'ll')}px)",
+);
+
+// @include mq(){}で書くとブレークポイントが反映される（初期値はmd）
+@mixin mq($mediaquery: md) {
+  @media #{map-get($mediaquerys, $mediaquery)} {
+    @content;
+  }
+}
+
+body {
+  color: $black;
+  background-color: $white;
+  font-family: $base-font-family;
+  font-weight: $normal;
+  font-size: rem(16);
+  font-style: normal;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+html{
+  scroll-padding-top:rem(44);
+  @include mq("md") {
+    scroll-padding-top:rem(60);
+  }
+}

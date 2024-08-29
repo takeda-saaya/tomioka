@@ -1,0 +1,54 @@
+@use "global" as *;
+
+$circle-diameter: rem(44); 
+$drawer-width: rem(21); 
+$drawer-height: rem(2); 
+
+.c-hamburger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: $circle-diameter;
+  height: $circle-diameter;
+  padding: 0;
+  background: $red;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.c-hamburger__line {
+  width: $drawer-width;
+  height: $drawer-height;
+  background-color: $white;
+  margin: rem(3); 
+  flex-shrink: 0;
+  transition: all 0.3s ease-in-out;
+  position: relative; 
+  border-radius: 2px;
+}
+
+.c-hamburger[aria-expanded="true"]{
+  background: $white;
+}
+
+.c-hamburger[aria-expanded="true"] .c-hamburger__line {
+  background-color: $red;
+  margin: 0;
+}
+
+.c-hamburger[aria-expanded="true"] .c-hamburger__line:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: rem(2); 
+}
+
+.c-hamburger[aria-expanded="true"] .c-hamburger__line:nth-of-type(2) {
+  opacity: 0;
+}
+
+.c-hamburger[aria-expanded="true"] .c-hamburger__line:nth-of-type(3) {
+  transform: rotate(-45deg);
+  top: rem(-2); 
+}

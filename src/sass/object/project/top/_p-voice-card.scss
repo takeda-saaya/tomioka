@@ -1,0 +1,74 @@
+@use "global" as *;
+
+.p-voice-card{
+  width: rem(272);
+  height: rem(350);
+  position: relative;
+  border-radius: 24px;
+  background: #C3925E;
+  box-shadow: 0px 2px 8px 0px rgba(182, 46, 55, 0.78);
+  z-index: 50;
+  padding: rem(121) rem(36) rem(42);
+  @include mq("md") {
+    height: rem(363);
+    width: rem(332);
+    padding: rem(123) rem(35) rem(64);
+  }
+}
+
+.p-voice-card::before{
+  position: absolute;
+  content: '';
+  background-image: url(".././images/top/voice-card-bg__sp.png");
+  background-size: contain; 
+  background-position: center;
+  background-repeat: no-repeat;
+  width:rem(260);
+  height: rem(337);
+  aspect-ratio: 260/337;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  z-index: -5;
+  @include mq("md") {
+    background-image: url(".././images/top/voice-card-bg__pc.png");
+    width:rem(318);
+    height: rem(351);
+    aspect-ratio: 318/351;
+  }
+}
+
+.p-voice-card.p-voice-card--bottom{
+  @include mq("xl") {
+    margin-top: rem(43);
+  }
+}
+
+.p-voice-card__figure img{
+  position: absolute;
+  top: rem(-111);
+  left: 50%;
+  transform: translatex(-50%);
+  width: 100%;
+  max-width: rem(200);
+  aspect-ratio: 200/220;
+  object-fit: cover;
+  height: auto;
+  @include mq("md") {
+    max-width: rem(250);
+    aspect-ratio: 250/275;
+    top: rem(-176);
+  }
+}
+
+
+.p-voice-card__figcaption{
+  font-size: rem(14);
+  font-weight: $medium;
+  line-height: 1.8; 
+  letter-spacing: 0.28px;
+  @include mq("md") {
+    font-size: rem(16);
+    letter-spacing: 0.32px;
+  }
+}

@@ -1,0 +1,118 @@
+@use "global" as *;
+
+.p-sub-mv__inner{
+  max-width: 100%;
+  @include mq("md") {
+    padding: 0 rem(40);
+    max-width: calc(1360px + rem(40)*2);
+  }
+}
+
+.p-sub-mv__wrap{
+  position: relative;
+}
+
+.p-sub-mv__title-box{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  @include mq("md") {
+    left: 0;
+  }
+}
+
+.p-sub-mv__img{
+  position: relative;
+  width: 100%;
+  height: rem(200);
+  @include mq("md") {
+    max-width: rem(1360);
+    aspect-ratio: 1360/607;
+    margin-inline: auto;
+    height: 100%;
+  }
+}
+
+.p-sub-mv__img::before,
+.p-sub-mv__img::after{
+  @include mq("md") {
+  position: absolute;
+  content: '';
+  background-size: contain; 
+  background-position: center;
+  background-repeat: no-repeat;
+  // width:rem(113);
+  // height:rem(104);
+  width:min(vw($full,113),rem(113));
+  height: min(vw($full,104),rem(104));
+  aspect-ratio: 113/104;
+  }
+}
+
+.p-sub-mv__img::before{
+  @include mq("md") {
+    background-image: url(".././images/common/sub-mv-deco3.png");
+    top: min(vw($full,281),rem(281));
+    left: 0;
+  }
+}
+
+.p-sub-mv__img::after{
+  @include mq("md") {
+    background-image: url(".././images/common/sub-mv-deco4.png");
+    bottom: 0;
+    right: min(vw($full,699),rem(699));
+    // right: rem(699);
+  }
+}
+
+.p-sub-mv__img.p-sub-mv__img--bg::after{
+  @include mq("md") {
+    background-image: url(".././images/contact/sub-mv-bg-deco1.png");
+    bottom: 0;
+    right: min(vw($full,699),rem(699));
+  }
+}
+
+.p-sub-mv__img.p-sub-mv__img--bg::before{
+  @include mq("md") {
+    background-image: url(".././images/contact/sub-mv-bg-deco1.png");
+    top: min(vw($full,281),rem(281));
+    left: 0;
+  }
+}
+
+.p-sub-mv__img.p-sub-mv__img--white::before{
+  @include mq("md") {
+    background-image: url(".././images/privacy policy/sub-mv-bg-white-deco1.png");
+    top: min(vw($full,281),rem(281));
+    left: 0;
+  }
+}
+
+.p-sub-mv__img.p-sub-mv__img--white::after{
+  @include mq("md") {
+    background-image: url(".././images/privacy policy/sub-mv-bg-white-deco1.png");
+    bottom: 0;
+    right: min(vw($full,699),rem(699));
+  }
+}
+
+.p-sub-mv__img,
+.p-sub-mv__img img{
+  border-radius: 30px;
+  @include mq("md") {
+    border-radius: 60px;
+  }
+}
+
+.p-sub-mv__img img{
+  height: 100%;
+}
+
+.p-sub-mv__breadcrumb{
+  margin-top: rem(13);
+  @include mq("md") {
+    margin-top: rem(26);
+  }
+}

@@ -1,0 +1,76 @@
+@use "global" as *;
+
+.p-assortment-item{
+  display: flex;
+  justify-content: center;
+}
+
+.p-assortment-item button{
+  padding: 0;
+}
+
+.p-assortment-item__img{
+  background: $white;
+  aspect-ratio: 1/1;
+  box-shadow: -7px 8px 8px 0px rgba(195, 146, 94, 0.04);
+  z-index: 1;
+  border-radius: 30px;
+  width: rem(250);
+  height: rem(250);
+  margin-inline: auto;
+  padding: rem(50) rem(10);
+  @include mq("md") {
+    width: min(vw($full,340),rem(340));
+    height: min(vw($full,340),rem(340));
+    aspect-ratio: 188/184;
+    padding: min(vw($full,53),rem(53)) min(vw($full,13),rem(13)) ;
+    border-radius: 74px;
+  }
+}
+
+.p-assortment-item__img img{
+  height: auto;
+  object-position: top left;
+  object-fit: contain;
+  margin-inline: auto;
+  width: rem(200);
+  aspect-ratio: 200/194;
+  @include mq("md") {
+    width: min(vw($full,314),rem(314));
+    aspect-ratio: 314/233;
+  }
+}
+
+.p-assortment-item__title{
+  font-weight: $bold;
+  line-height: 1.6; 
+  letter-spacing: 0.36px;
+  text-align: center;
+  margin-top: rem(5);
+  color: $black;
+  @include mq("md") {
+    font-size: rem(18);
+    margin-top: rem(15);
+    text-align-last: left;
+  }
+}
+
+.p-assortment-item__cats{
+  display: flex;
+  gap: rem(5);
+  justify-content: center;
+  color: $black;
+  @include mq("md") {
+    gap: min(vw($full,18),rem(18));
+    justify-content: start;
+  }
+}
+
+.p-assortment-item__cat{
+  font-weight: $medium;
+  line-height: 1.8; 
+  letter-spacing: 0.32px;
+  @include mq("md") {
+    font-size: min(vw($full,16),rem(16));
+  }
+}

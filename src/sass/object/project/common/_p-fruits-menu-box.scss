@@ -1,0 +1,47 @@
+@use "global" as *;
+
+.p-fruits-menu-box {
+  position: relative;
+  display: inline-block;
+}
+
+.p-fruits-menu-box::before {
+  position: absolute;
+  content: "";
+  background-image: url(".././images/common/arrow-red.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  aspect-ratio: 1/1;
+  transition: transform 0.3s ease; 
+  width: 1em;
+  height: 1em;
+  transform: translateY(-50%) rotate(90deg);
+  top: 50%;
+  right: rem(10);
+  @include mq("md") {
+    width: 1.5em;
+    height: 1.5em;
+    right: rem(28);
+    }
+}
+
+.p-fruits-menu-box__link{
+  display: inline-block;
+  border-radius: 70px;
+  background: $red;
+  color: $white;
+  font-weight: $bold;
+  line-height: 1; 
+  text-transform: capitalize;
+  font-size: rem(10);
+  padding: rem(10) rem(40) rem(10) rem(10);
+  @include mq("md") {
+    font-size: rem(18);
+    padding: min(vw($full,21),rem(21)) min(vw($full,86),rem(86)) min(vw($full,21),rem(21)) min(vw($full,67),rem(67));
+  }
+}
+
+.p-fruits-menu-box__link:hover{
+  opacity: 1;
+}

@@ -1,0 +1,51 @@
+@use "global" as *;
+
+.p-small-dropdown{
+  position: relative;
+}
+
+.p-small-dropdown::before {
+  content: "";
+  position: absolute;
+  background-image: url(".././images/common/dropdown-arrow-white.png") ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 57%;
+  transition: transform 0.3s; 
+  z-index: 10;
+  right: rem(6);
+  width: 0.25em;
+  height: 0.15em;
+  @include mq("md") {
+    top: 50%;
+    transform: translateY(-50%); 
+    right: rem(12);
+    width: 0.5em;
+    height: 0.31em;
+  }
+}
+
+.p-small-dropdown__body {
+  position: relative; 
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background-color: $red;
+  color: $white;
+  font-weight: $medium;
+  line-height: 1;
+  letter-spacing: 0.32px;
+  transition: all 0.3s; 
+  font-size: rem(10);
+  padding:  rem(5) rem(15) rem(5) rem(10);
+  @include mq("md") {
+    padding: min(vw($full,6),rem(6)) min(vw($full,42),rem(42)) min(vw($full,6),rem(6)) min(vw($full,14),rem(14));
+    gap: 20px;
+    font-size: min(vw($full,16),rem(16));
+  }
+}
+
+.p-small-dropdown__body.p-small-dropdown__body--bg{
+  background-color: $brown;
+}

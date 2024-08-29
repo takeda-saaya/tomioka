@@ -1,0 +1,54 @@
+@use "global" as *;
+
+.c-modal-btn {
+  display: flex;
+  justify-content: center;
+  color: $white;
+  background-color: $red;
+  font-family: fot-tsukuardgothic-std, sans-serif;;
+  width: rem(280);
+  font-weight: $bold;
+  line-height:1;
+  border-radius: 70px;
+  padding: rem(15) rem(44) rem(15) rem(20);
+  background-image: url(".././images/common/arrow-red.png");
+  background-repeat: no-repeat;
+  background-position: right rem(20) center;
+  background-size: rem(20);
+  border: 1px solid $red;
+  @include mq("md") {
+    font-size: rem(18);
+    padding: rem(23) rem(44) rem(23) rem(20);
+    width: rem(328);
+    background-size: rem(24);
+  }   
+}
+
+.c-modal-btn:hover {
+  background-color: $white;
+  color: $red;
+  border: 1px solid currentColor;
+  background-image: url(".././images/common/arrow-white.png");
+}
+
+.c-modal-btn.c-modal-btn--white{
+  color: $red;
+  border: 1px solid #E63D48;
+  background: $white;
+  background-image: url(".././images/common/arrow-white.png");
+  background-repeat: no-repeat;
+  background-position: right rem(20) center;
+  background-size: rem(20);
+  transition: all 0.3s;
+  padding: rem(15) rem(44) rem(15) rem(20);
+  @include mq("md") {
+    padding: rem(22) rem(44) rem(22) rem(20);
+    background-size: rem(24);
+  }
+}
+
+.c-modal-btn--white:hover{
+  background-color: $red;
+  color: $white;
+  background-image: url(".././images/common/arrow-red.png");
+}

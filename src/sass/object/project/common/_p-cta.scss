@@ -1,0 +1,195 @@
+@use "global" as *;
+
+.p-cta{
+  background-image: url(".././images/top/cta-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: rem(65) 0;
+  @include mq("md") {
+    padding: rem(79) 0 rem(70);
+  }
+}
+
+.p-cta__body{
+  border-radius: 40px;
+  background: $red;
+  box-shadow: 0px 4px 6px 0px rgba(129, 20, 27, 0.22);
+  position: relative;
+  height: rem(452);
+  width: rem(355);
+  margin-inline: auto;
+  transition: all 0.3s;
+  z-index: 10;
+  @include mq("md") {
+    height: min(vw($full,452),rem(452));
+    width: min(vw($full,1100),rem(1100));
+  }
+}
+
+.p-cta__body::before{
+  position: absolute;
+  content: '';
+  background-image: url(".././images/top/cta-bg-beige__sp.png");
+  background-size: contain; 
+  background-position: center;
+  background-repeat: no-repeat;
+  width:rem(342);
+  height: rem(437);
+  aspect-ratio: 342/437;
+  top: rem(5);
+  left: 50%;
+  transform: translateX(-50%);
+  @include mq("md") {
+    background-image: url(".././images/top/cta-bg-beige__pc.png");
+    width:min(vw($full,1075),rem(1075));
+    aspect-ratio: 1075/430;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+.p-cta__body::after{
+  position: absolute;
+  content: '';
+  background-image: url(".././images/top/cta-deco.png");
+  background-size: contain; 
+  background-position: center;
+  background-repeat: no-repeat;
+  width:rem(34);
+  height: rem(46);
+  aspect-ratio: 34/46;
+  top: rem(-29);
+  right: rem(126);
+  transform: translateX(-50%);
+  z-index: -1;
+  @include mq("md") {
+    width:min(vw($full,49),rem(49));
+    height: rem(66);
+    aspect-ratio: 49/66;
+    top: min(vw($full,-49),rem(-49));
+    right: min(vw($full,322),rem(322));
+  }
+}
+
+.p-cta__wrap{
+  position: relative;
+  top: rem(36);
+  padding: 0 rem(17);
+  @include mq("md") {
+    top: min(vw($full,99),rem(99));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+}
+
+.p-cta__left{
+  position: relative;
+  text-align: center;
+}
+
+.p-cta__heading-en{
+  color: rgba(195, 146, 94, 0.27);
+  text-align: center;
+  font-family: lato, sans-serif;;
+  font-size: rem(50);
+  font-weight: $bold;
+  letter-spacing: 6px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  @include mq("md") {
+    font-size: min(vw($full,60),rem(80));
+    letter-spacing: 9.6px;
+    text-align-last: left;
+    font-size: min(vw($full,80),rem(80));
+  }
+}
+
+.p-cta__heading-ja{
+  text-align: center;
+  font-family: fot-tsukuardgothic-std, sans-serif;;
+  font-size: rem(32);
+  font-weight: $bold;
+  line-height: 1.8; 
+  letter-spacing: 1.28px;
+  margin-top: rem(-36);
+  @include mq("md") {
+    font-size: min(vw($full,40),rem(40));
+    letter-spacing: 1.6px;
+    margin-top: min(vw($full,-38),rem(-38));
+    text-align-last: left;
+  }
+}
+
+.p-cta__text{
+  display: inline-block;
+  text-align: left;
+  font-size: rem(15);
+  font-weight: $medium;
+  line-height: 1.8; 
+  letter-spacing: 0.3px;
+  margin-top: rem(11);
+  @include mq("md") {
+    font-size: min(vw($full,16),rem(16));
+    line-height: 2; 
+    letter-spacing: 0.32px;
+    margin-top: min(vw($full,28),rem(28));
+    text-align: left;
+  }
+}
+
+.p-cta__btn{
+  display: flex;
+  flex-direction: row-reverse;
+  gap: rem(17);
+  margin-top: rem(12);  
+  @include mq("md") {
+    width: rem(449);
+    margin-top: 0;
+    margin-left: min(vw($full,-75),rem(-75));
+    gap: min(vw($full,25),rem(25));
+  }
+}
+
+.p-cta__btn__img{
+  position: relative;
+  width: 100%;
+  max-width: rem(155);
+  aspect-ratio: 155/152;
+  @include mq("md") {
+    max-width:min(vw($full,212),rem(212));
+    aspect-ratio: 1/1;
+    margin-top: 0;
+  }
+}
+
+.p-cta__body:hover{
+  filter: brightness(0.8);
+  .p-cta__btn__img {
+    transform: rotate(4deg);
+  } 
+}
+
+.p-cta__btn img{
+  height: 100%;
+  object-fit: contain;
+}
+
+.p-cta__deco {
+  position: relative;
+  width: 100%;
+  max-width: rem(153);
+  aspect-ratio: 153/154;
+  @include mq("md") {
+    max-width: min(vw($full,212),rem(212));
+    aspect-ratio: 1/1;
+  }
+}
+
+.p-cta__deco img{
+  height: 100%;
+  object-fit: contain;
+}
+

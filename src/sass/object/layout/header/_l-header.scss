@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.l-header {
+  min-height: rem(44);
+  position: fixed;
+  top: rem(16);
+  left: 0;
+  right: 0;
+  z-index: 999;
+  @include mq("md") {
+    min-height: rem(83);
+    top: rem(10);
+  }
+  @include mq("xl") {
+    z-index: 700;
+  }
+}

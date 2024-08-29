@@ -1,0 +1,56 @@
+@use "global" as *;
+
+.p-sp-nav {
+  background-color: $red;
+  transform: translateX(100%);
+  transition: 0.3s ease-in-out;
+  border-radius: 0px 0px 40px 40px;
+  overflow: hidden;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.p-sp-nav__items{
+  display: grid;
+  gap: rem(51);
+  row-gap: rem(32);
+  grid-template-columns: repeat(2, 1fr); 
+  margin-left: rem(30);
+  margin-top: rem(60);
+  padding-top: rem(40);
+  overflow: auto;
+}
+
+.p-sp-nav__item{
+  display: grid;
+  gap: rem(8);
+  color: #FFF;
+  font-weight: $bold;
+}
+
+.p-sp-nav__item a:nth-child(1) {
+  width: rem(146);
+  font-family: fot-tsukuardgothic-std, sans-serif;;
+  font-size: rem(18);
+  line-height: 1; 
+}
+.p-sp-nav__item a:nth-child(2) {
+  font-family: lato, sans-serif;;
+  font-size: rem(14);
+  line-height: 1.2;
+  letter-spacing: 0.56px;
+  text-transform: uppercase;
+}
+
+.p-sp-nav__btn{
+  margin-top: rem(62);
+  margin-left: rem(30);
+}
+
+body.is-open {
+  overflow: hidden;
+  .p-sp-nav {
+    transform: translateX(0px);
+  }
+}
