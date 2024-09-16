@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <main>
-  <div class="l-single-block p-single-block">
+  <div class="p-single-block">
 
     <!-- パンくず -->
     <div class="c-breadcrumb">
@@ -34,9 +34,9 @@
                 </div>
               </div>
               <!-- 投稿タイトル -->
-              <h2 class="p-single__title">
+              <h1 class="p-single__title">
                 <?php the_title(); ?>
-              </h2>
+              </h1>
               <!-- 投稿本文 -->
               <div class="p-single__content">
                 <?php the_content(); ?>

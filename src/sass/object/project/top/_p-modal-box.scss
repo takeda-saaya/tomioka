@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.p-modal-box{
+.p-modal-box {
   position: relative;
   background: $white;
   border-radius: 40px;
@@ -12,11 +12,11 @@
   }
 }
 
-.p-modal-box::before{
+.p-modal-box::before {
   position: absolute;
   content: "";
   background-image: url(".././images/common/tag.png");
-  background-size: contain; 
+  background-size: contain;
   background-position: center;
   width: rem(42);
   height: rem(53);
@@ -32,11 +32,11 @@
   }
 }
 
-.p-modal-box__title{
+.p-modal-box__title {
   color: $red;
   font-family: $second-font-family;
   font-size: rem(52);
-  line-height: 1; 
+  line-height: 1;
   letter-spacing: 1.04px;
   text-align: center;
   @include mq("md") {
@@ -45,28 +45,28 @@
   }
 }
 
-.p-modal-box__title.p-modal-box__title--pink{
+.p-modal-box__title.p-modal-box__title--pink {
   color: $pink;
 }
 
-.p-modal-box__table{
+.p-modal-box__table {
   margin-top: rem(40);
   @include mq("md") {
-     margin-top: rem(71);
+    margin-top: rem(71);
   }
 }
 
-.p-modal-box__body{
+.p-modal-box__body {
   display: grid;
   gap: rem(20);
 }
 
-.p-modal-box__row{
+.p-modal-box__row {
   display: flex;
   align-items: start;
   flex-direction: column;
   gap: rem(2);
-  border-bottom: 1px solid #D7D7D7;
+  border-bottom: 1px solid #d7d7d7;
   padding-bottom: rem(14);
   @include mq("md") {
     flex-direction: row;
@@ -74,28 +74,33 @@
   }
 }
 
-.p-modal-box__hed{
+.p-modal-box__hed {
   width: rem(124);
   border-radius: 100px;
   background: $red;
   color: $white;
   text-align: center;
-  line-height: 1; 
+  line-height: 1;
   letter-spacing: 0.32px;
   padding: rem(6) rem(21);
   flex-shrink: 0;
+  font-weight: 400;
 }
 
-.p-modal-box__hed.p-modal-box__hed--pink{
+.p-modal-box__hed.p-modal-box__hed--pink {
   background-color: $pink;
 }
 
-.p-modal-box__data{
-  line-height: 1.8; 
+.p-modal-box__data {
+  line-height: 1.8;
   letter-spacing: 0.32px;
   margin-top: rem(2);
   padding: 0;
   @include mq("md") {
     margin-top: 0;
   }
+}
+
+.p-modal-box__data span {
+  font-weight: bold;
 }

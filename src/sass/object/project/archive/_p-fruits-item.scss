@@ -1,76 +1,75 @@
 @use "global" as *;
 
-.p-fruits-item{
+.p-fruits-item {
   display: flex;
   justify-content: center;
 }
 
-.p-fruits-item button{
+.p-fruits-item button {
   padding: 0;
 }
 
-.p-fruits-item__img{
+.p-fruits-item__img {
   background: $white;
   aspect-ratio: 1/1;
   box-shadow: -7px 8px 8px 0px rgba(195, 146, 94, 0.04);
   z-index: 1;
   border-radius: 30px;
-  width: rem(250);
-  height: rem(250);
+  width: rem(352);
+  height: rem(352);
   margin-inline: auto;
-  padding: rem(75) 0;
+  padding: rem(25) 0;
   @include mq("md") {
-    width: min(vw($full,340),rem(340));
-    height: min(vw($full,340),rem(340));
     aspect-ratio: 188/184;
-    padding: min(vw($full,78),rem(78)) min(vw($full,10),rem(10)) min(vw($full,78),rem(78)) min(vw($full,10),rem(10));
+    padding: min(vw($full, 78), rem(78)) min(vw($full, 10), rem(10)) min(vw($full, 78), rem(78))
+      min(vw($full, 10), rem(10));
     border-radius: 74px;
   }
 }
 
-.p-fruits-item__img img{
+.p-fruits-item__img img {
   height: auto;
   object-position: top left;
   object-fit: contain;
   margin-inline: auto;
-  width: rem(100);
-  aspect-ratio: 100/97;
+  width: rem(304);
+  aspect-ratio: 304/297;
   @include mq("md") {
-    width: min(vw($full,188),rem(188));
+    width: rem(188);
     aspect-ratio: 188/184;
   }
 }
 
-.p-fruits-item__title{
+.p-fruits-item__title {
   font-weight: $bold;
-  line-height: 1.6; 
+  line-height: 1.6;
   letter-spacing: 0.36px;
   text-align: center;
-  margin-top: rem(5);
+  margin-top: rem(15);
   color: $black;
   @include mq("md") {
     font-size: rem(18);
     margin-top: rem(15);
-    text-align-last: left;
   }
 }
 
-.p-fruits-item__cats{
+.p-fruits-item__cats {
   display: flex;
   gap: rem(5);
   justify-content: center;
   color: $black;
+  margin-top: rem(5);
   @include mq("md") {
-    gap: min(vw($full,18),rem(18));
-    justify-content: start;
+    gap: min(vw($full, 18), rem(18));
+    margin-top: rem(10);
   }
 }
 
-.p-fruits-item__cat{
+.p-fruits-item__cat {
   font-weight: $medium;
-  line-height: 1.8; 
+  line-height: 1.8;
   letter-spacing: 0.32px;
   @include mq("md") {
-    font-size: min(vw($full,16),rem(16));
+    font-size: min(vw($full, 16), rem(16));
   }
 }

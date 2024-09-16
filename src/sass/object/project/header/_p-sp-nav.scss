@@ -11,39 +11,39 @@
   }
 }
 
-.p-sp-nav__items{
+.p-sp-nav__items {
   display: grid;
   gap: rem(51);
   row-gap: rem(32);
-  grid-template-columns: repeat(2, 1fr); 
+  grid-template-columns: repeat(2, 1fr);
   margin-left: rem(30);
   margin-top: rem(60);
   padding-top: rem(40);
   overflow: auto;
 }
 
-.p-sp-nav__item{
+.p-sp-nav__item a {
   display: grid;
   gap: rem(8);
-  color: #FFF;
+  color: #fff;
   font-weight: $bold;
 }
 
 .p-sp-nav__item a:nth-child(1) {
   width: rem(146);
-  font-family: fot-tsukuardgothic-std, sans-serif;;
+  font-family: fot-tsukuardgothic-std, sans-serif;
   font-size: rem(18);
-  line-height: 1; 
+  line-height: 1;
 }
 .p-sp-nav__item a:nth-child(2) {
-  font-family: lato, sans-serif;;
+  font-family: lato, sans-serif;
   font-size: rem(14);
   line-height: 1.2;
   letter-spacing: 0.56px;
   text-transform: uppercase;
 }
 
-.p-sp-nav__btn{
+.p-sp-nav__btn {
   margin-top: rem(62);
   margin-left: rem(30);
 }

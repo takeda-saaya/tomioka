@@ -1,8 +1,8 @@
 @use "global" as *;
 
-.p-fruits{
+.p-fruits {
   padding-bottom: rem(130);
-  padding-top: vw(375,90);
+  padding-top: vw(375, 90);
   z-index: 100;
   background-color: $beige;
   @include mq("md") {
@@ -11,15 +11,15 @@
   }
 }
 
-.p-fruits::after{
-  position: absolute; 
-  content: '';
-  background-size: cover; 
+.p-fruits::after {
+  position: absolute;
+  content: "";
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   left: 0;
-  width:100%;
-  height: vw(375,57);
+  width: 100%;
+  height: vw(375, 57);
   top: rem(-15);
   background-image: url(".././images/top/about-bg-bottom-red__sp.png");
   @include mq("md") {
@@ -27,11 +27,10 @@
   }
 }
 
-
-.p-fruits::before{
-  position: absolute; 
-  content: '';
-  background-size: cover; 
+.p-fruits::before {
+  position: absolute;
+  content: "";
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-image: url(".././images/top/fruits-bg__sp.png");
@@ -51,22 +50,22 @@
   }
 }
 
-.p-fruits__title__box{
+.p-fruits__title__box {
   display: inline-block;
 }
 
-.p-fruits__text{
+.p-fruits__text {
   font-weight: $medium;
-  line-height: 2; 
+  line-height: 2;
   letter-spacing: 0.32px;
-  margin-top: rem(4);
+  margin-top: rem(14);
   @include mq("md") {
-    line-height: 2.2; 
+    line-height: 2.2;
     margin-top: rem(14.4);
   }
 }
 
-.p-fruits__cards{
+.p-fruits__cards {
   margin-top: rem(50);
   display: grid;
   gap: rem(40);
@@ -76,7 +75,7 @@
   }
 }
 
-.p-fruits__btn{
+.p-fruits__btn {
   display: flex;
   justify-content: center;
   margin-top: rem(40);

@@ -1,36 +1,38 @@
 @use "global" as *;
 
-.p-sub-title-box{
+.p-sub-title-box {
   display: inline-block;
   background-image: url(".././images/common/sub-mv-bg.png");
   background-size: cover;
   background-position: top left;
   background-repeat: no-repeat;
-  width: min(vw(375,180),rem(250));
   height: rem(80);
-  padding:vw(375,10) 0;
+  padding: vw(375, 20) 0 vw(375, 10);
   border-top-right-radius: rem(30);
+  width: rem(288);
   @include mq("md") {
-    width: min(vw($full,548),rem(548));
-    height: min(vw($full,222),rem(222));
-    padding: min(vw($full,49),rem(49)) min(vw($full,25),rem(25)) min(vw($full,15),rem(15)) min(vw($full,130),rem(130));
+    width: min(vw($full, 548), rem(548));
+    height: min(vw($full, 222), rem(222));
+    padding: min(vw($full, 49), rem(49)) min(vw($full, 25), rem(25)) min(vw($full, 15), rem(15))
+      min(vw($full, 130), rem(130));
   }
 }
 
-.p-title-box--bg{
+.p-title-box--bg {
   background-image: url(".././images/contact/contact-mv-bg.png");
 }
 
-.p-sub-title-box.p-title-box--white{
+.p-sub-title-box.p-title-box--white {
   background-image: url(".././images/privacy policy/privacy-policy-mv-bg.png");
   @include mq("md") {
-    padding: min(vw($full,49),rem(49)) min(vw($full,25),rem(25)) min(vw($full,15),rem(15)) min(vw($full,130),rem(130));
+    padding: min(vw($full, 49), rem(49)) min(vw($full, 25), rem(25)) min(vw($full, 15), rem(15))
+      min(vw($full, 130), rem(130));
   }
 }
 
-.p-sub-title__top{
+.p-sub-title__top {
   color: $brown;
-  font-family: lato, sans-serif;;
+  font-family: lato, sans-serif;
   font-weight: $bold;
   line-height: 1.2;
   letter-spacing: 0.64px;
@@ -41,33 +43,32 @@
   }
 }
 
-.p-sub-title__bottom{
+.p-sub-title__bottom {
   color: $black;
   text-align: left;
   font-family: fot-tsukuardgothic-std, sans-serif;
   font-weight: $bold;
   letter-spacing: 1.04px;
-  font-size: rem(20);
+  font-size: rem(24);
   line-height: 1;
   white-space: nowrap;
   @include mq("md") {
-    line-height:1.8; 
-    font-size: min(vw($full,40),rem(40));
+    line-height: 1.8;
+    font-size: min(vw($full, 40), rem(40));
     letter-spacing: 1.6px;
     margin-top: rem(-2);
   }
 }
 
-.p-sub-title__bottom.p-sub-title__bottom--small{
+.p-sub-title__bottom.p-sub-title__bottom--small {
   @include mq("md") {
-    font-size: min(vw($full,40),rem(40));
+    font-size: min(vw($full, 40), rem(40));
   }
 }
 
-.p-sub-title__dropdown{
-  margin-top: rem(5);
+.p-sub-title__dropdown {
+  margin-top: rem(30);
   @include mq("md") {
-    margin-top: rem(8);
+    margin-top: rem(20);
   }
 }
-

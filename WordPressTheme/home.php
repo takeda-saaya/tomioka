@@ -11,7 +11,7 @@
         </div>
         <div class="p-sub-mv__title-box p-sub-title-box">
           <p class="p-sub-title__top">news</p>
-          <h2 class="p-sub-title__bottom">お知らせ</h2>
+          <h1 class="p-sub-title__bottom">お知らせ</h1>
 
           <!-- カテゴリードロップダウンメニュー -->
           <div class="p-sub-title__dropdown p-sub-dropdown">
@@ -132,14 +132,14 @@
       <!-- ページナビ -->
       <div class="p-archive-pagenave l-archive-pagenave">
         <?php
-        $pagination_args = array(
+        $pagination = get_the_posts_pagination(array(
           'mid_size'  => 2,
           'end_size'  => 1,
           'prev_text' => '<',
           'next_text' => '>',
           'screen_reader_text' => ' ',
-        );
-        the_posts_pagination($pagination_args);
+        ));
+        echo preg_replace('/\<h2 class=\"screen-reader-text\"\>(.*?)\<\/h2\>\n/', '', $pagination);
         ?>
       </div>
 

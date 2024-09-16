@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.p-access{
+.p-access {
   background-color: $beige;
   padding: rem(60) 0;
   @include mq("md") {
@@ -8,14 +8,19 @@
   }
 }
 
-.p-access__title__box{
+.p-access__inner {
+  padding-left: rem(5);
+  padding-right: 0;
+}
+
+.p-access__title__box {
   text-align: center;
   @include mq("md") {
     text-align-last: left;
   }
 }
 
-.p-access__body{
+.p-access__body {
   display: flex;
   flex-direction: column;
   @include mq("md") {
@@ -25,53 +30,55 @@
   }
 }
 
-.p-access__box{
+.p-access__box {
   @include mq("md") {
-    margin-left: min(vw($full,70),rem(70));
+    margin-left: min(vw($full, 70), rem(70));
     flex: 1;
   }
 }
 
-.p-access__info{
+.p-access__info {
   display: grid;
   gap: rem(10);
   margin-top: rem(20);
   @include mq("md") {
     gap: rem(20);
-    margin-top: rem(24); 
+    margin-top: rem(24);
   }
 }
 
-.p-access__info-box{
+.p-access__info-box {
   display: flex;
-  gap: rem(20);
+  gap: rem(16);
   align-items: center;
+  justify-content: center;
   @include mq("md") {
     gap: rem(18);
   }
 }
 
-.p-access__info__title{
+.p-access__info__title {
   position: relative;
   border-radius: 100px;
   background: $red;
-  color: #FFF;
+  color: #fff;
   font-weight: $bold;
   letter-spacing: 0.32px;
   padding: rem(5) rem(5) rem(5) rem(35);
-  width: 30%;
   font-size: rem(14);
+  width: min(vw(375, 100), rem(120));
   @include mq("md") {
-    font-size: min(vw($full,16),rem(16));
-    padding: min(vw($full,10),rem(10)) min(vw($full,10),rem(10)) min(vw($full,10),rem(10)) min(vw($full,51),rem(51));
-    width: min(vw($full,134),rem(134));
+    font-size: min(max(vw($full, 16), 10px), 16px);
+    padding: min(vw($full, 10), rem(10)) min(vw($full, 10), rem(10)) min(vw($full, 10), rem(10))
+      min(vw($full, 51), rem(51));
+    width: min(max(vw($full, 134), 85px), 150px);
   }
 }
 
-.p-access__info__title::before{
-  position: absolute; 
-  content: '';
-  background-size: contain; 
+.p-access__info__title::before {
+  position: absolute;
+  content: "";
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   top: 50%;
@@ -85,64 +92,67 @@
   background-image: url(".././images/about/info-icon1.png");
   aspect-ratio: 14/20;
   @include mq("md") {
-    left:rem(21);
+    left: min(vw($full, 21), rem(21));
   }
 }
 
 .p-access__info-box:nth-of-type(2) .p-access__info__title::before {
   left: rem(10);
-  width:1.1em;
+  width: 1.1em;
   height: auto;
   background-image: url(".././images/about/info-icon2.png");
   aspect-ratio: 1/1;
   @include mq("md") {
-    left:rem(21);
+    left: min(vw($full, 21), rem(21));
   }
 }
 
 .p-access__info-box:nth-of-type(3) .p-access__info__title::before {
   left: rem(10);
-  width:1.25em;
+  width: 1.25em;
   height: auto;
   background-image: url(".././images/about/info-icon3.png");
   aspect-ratio: 1/1;
   @include mq("md") {
-    left:rem(21);
+    left: min(vw($full, 21), rem(21));
   }
 }
 
 .p-access__info-box:nth-of-type(4) .p-access__info__title::before {
   left: rem(10);
-  width:1.1em;
+  width: 1.1em;
   height: auto;
   background-image: url(".././images/about/info-icon4.png");
   aspect-ratio: 1/1;
   @include mq("md") {
-    left:rem(21);
+    left: min(vw($full, 21), rem(21));
   }
 }
 
-.p-access__info_text{
+.p-access__info_text {
   font-weight: 700;
   letter-spacing: 0.36px;
-  font-size: rem(14); 
+  font-size: rem(14);
+  flex: 1;
   @include mq("md") {
-    font-size: min(vw($full,18),rem(18));
+    font-size: min(max(vw($full, 18), 12px), 18px);
   }
 }
 
-.p-access__map{
-  margin-top: rem(20);
+.p-access__map {
+  margin-top: rem(24);
   border-radius: 40px;
+  padding-right: rem(5);
   @include mq("md") {
     margin-top: 0;
+    padding-right: 0;
   }
 }
 
 .p-access__map .map-container {
   position: relative;
   border-radius: 40px;
-  border: 8px solid #C3925E;
+  border: 8px solid #c3925e;
   overflow: hidden;
   height: rem(350);
   @include mq("md") {

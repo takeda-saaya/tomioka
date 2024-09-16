@@ -11,18 +11,14 @@
         </div>
         <div class="p-sub-mv__title-box p-sub-title-box">
           <p class="p-sub-title__top">about</p>
-          <h2 class="p-sub-title__bottom">私たちについて</h2>
+          <h1 class="p-sub-title__bottom">私たちについて</h1>
 
           <!-- カテゴリードロップダウンメニュー -->
           <div class="p-sub-title__dropdown p-about-small-dropdown">
             <div class="p-about-small-dropdown__box-body p-about-dropdown">
-              <div class="p-about-dropdown__box js-dropdown-trigger">
+              <a href="#features" class="p-about-dropdown__box js-dropdown-trigger">
                 <span class="p-about-dropdown-label">特徴</span>
-                <div class="p-about-dropdown__content">
-                  <a href="#features" class="p-about-dropdown__body">特徴</a>
-                  <a href="#concept" class="p-about-dropdown__body">想い</a>
-                </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -152,7 +148,7 @@
           <img src="<?php echo get_theme_file_uri('assets/images/about/concept.png'); ?>" alt="2人の女性と男性の農家が、野菜を持って笑顔でこちらを見ている" width="350" height="170" loading="lazy">
         </div>
         <div class="p-concept__text-box">
-          <h3 class="p-concept__sub-title">丹精込めて。</h3>
+          <div class="p-concept__sub-title">丹精込めて。</div>
           <div class="p-concept__texts">
             <p class="p-concept__text">私たち自然農園冨岡は「丹精込めて。」<br>
               という理念のもと運営しております。</p>

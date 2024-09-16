@@ -11,7 +11,7 @@
         </div>
         <div class="p-sub-mv__title-box p-sub-title-box">
           <p class="p-sub-title__top">fruit list</p>
-          <h2 class="p-sub-title__bottom">果物一覧</h2>
+          <h1 class="p-sub-title__bottom">果物一覧</h1>
 
           <!-- カテゴリードロップダウンメニュー -->
           <div class="p-sub-title__dropdown p-sub-dropdown">
@@ -89,7 +89,7 @@
         $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 
         $args = array(
-          'post_type' => 'fruits',
+          'post_type' => 'fruits-list',
           'paged' => $paged,
           'posts_per_page' => 9,
           'tax_query' => array(
@@ -212,14 +212,14 @@
       <!-- ページナビ -->
       <div class="p-archive-pagenave l-archive-pagenave">
         <?php
-        $pagination_args = array(
+        $pagination = get_the_posts_pagination(array(
           'mid_size'  => 2,
           'end_size'  => 1,
           'prev_text' => '<',
           'next_text' => '>',
           'screen_reader_text' => ' ',
-        );
-        the_posts_pagination($pagination_args);
+        ));
+        echo preg_replace('/\<h2 class=\"screen-reader-text\"\>(.*?)\<\/h2\>\n/', '', $pagination);
         ?>
       </div>
 

@@ -9,58 +9,55 @@
   width: rem(212);
   padding: rem(19) rem(31);
   background-color: $white;
-  font-family: fot-tsukuardgothic-std, sans-serif;; 
-  color: $red; 
+  font-family: fot-tsukuardgothic-std, sans-serif;
+  color: $red;
   border-radius: 30px;
-  font-size: rem(18); 
-  font-weight: bold; 
+  font-size: rem(18);
+  font-weight: bold;
   line-height: 1;
   @include mq("md") {
-    width: min(vw($full,212),rem(212));
-    padding: min(vw($full,19),rem(19)) min(vw($full,31),rem(31));
-    font-size: min(vw($full,18),rem(18)); 
-    gap: min(vw($full,16),rem(16));
-    white-space: nowrap;  }
-} 
+    width: min(vw($full, 212), rem(212));
+    padding: min(vw($full, 19), rem(19)) min(vw($full, 31), rem(31));
+    font-size: min(vw($full, 18), rem(18));
+    gap: min(vw($full, 16), rem(16));
+    white-space: nowrap;
+  }
+}
 
-.c-header-btn::before{
+.c-header-btn::before {
   position: absolute;
-  content: '';
+  content: "";
   background-image: url(".././images/common/btn-deco1.png");
-  background-size: contain; 
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  width:rem(27);
+  width: rem(27);
   height: rem(19);
   aspect-ratio: 27/19;
   top: rem(-12);
-  left:rem(105);
+  left: rem(105);
 }
 
-.c-header-btn.c-header-btn--red{
+.c-header-btn.c-header-btn--red {
   position: relative;
   background-color: $red;
   border: 1px solid $red;
   color: $white;
-  }
+}
 
-.c-header-btn.c-header-btn--red::before{
+.c-header-btn.c-header-btn--red::before {
   background-image: url(".././images/common/btn-deco2.png");
   transition: all 0.3s;
 }
 
-.c-header-btn.c-header-btn--red:hover{
+.c-header-btn.c-header-btn--red:hover {
   background-color: $white;
   color: $red;
 }
 
-.c-header-btn.c-header-btn--red:hover::before {
-  background-image: url(".././images/common/btn-deco1.png");
-}
-
 .c-header-btn svg {
-  stroke: $red;
-  fill: $white; 
+  @include mq("md") {
+    stroke: $white;
+    fill: $red;
+  }
 }
-
-

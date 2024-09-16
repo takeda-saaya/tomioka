@@ -1,24 +1,27 @@
 @use "global" as *;
 
-.p-contact{
-  padding-bottom: rem(110);
+.p-contact {
   overflow: hidden;
+  padding-bottom: rem(80);
+  @include mq("md") {
+    padding-bottom: rem(110);
+  }
 }
 
-.p-contact__inner{
+.p-contact__inner {
   @include mq("md") {
-    max-width: calc(1068px + rem(25)*2);
+    max-width: calc(1068px + rem(25) * 2);
   }
 }
 
 .p-contact__text {
   font-size: rem(16);
-  line-height: 1;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.8px;
   font-weight: $medium;
   @include mq("md") {
-    line-height: 2.2; 
+    line-height: 2.2;
     font-size: rem(20);
   }
 }
@@ -30,65 +33,74 @@
   }
 }
 
-.p-contact__bottom{
-  margin-top: rem(30);
+.p-contact__bottom {
+  margin-top: rem(65);
   @include mq("md") {
     margin-top: rem(110);
   }
 }
 
-.p-contact__tels{
+.p-contact__tels {
   display: flex;
   flex-direction: column;
-  gap: rem(15);
-  margin-top: rem(50);
+  gap: rem(20.8);
+  margin-top: rem(30);
   justify-content: center;
   align-items: center;
   @include mq("md") {
     flex-direction: row;
     gap: rem(28);
+    margin-top: rem(30);
   }
 }
 
-.p-contact__tel{
+.p-contact__tel {
   display: inline-block;
   color: $white;
   font-weight: $bold;
-  line-height: 1.4; 
+  line-height: 1.4;
   letter-spacing: 0.96px;
   border-radius: 100px;
   border: 1px solid $red;
   background: $red;
   width: rem(300);
-  padding: rem(20);
+  padding: rem(20.8);
   text-align: center;
+  @include mq("md") {
+    width: rem(355);
+    padding: rem(25);
+  }
 }
 
-.p-contact__tel.p-contact__tel--bg{
+.p-contact__tel.p-contact__tel--bg {
   color: $red;
   border: 1px solid $red;
-  background: #FFF;
+  background: #fff;
 }
 
-.p-contact__deco-texts{
+.p-contact__deco-texts {
   position: absolute;
   color: $white;
   font-weight: $medium;
   line-height: 1.5;
   z-index: 50;
-  font-size: rem(10);
   bottom: rem(14);
   left: 0;
+  font-size: max(vw($full, 12), 12px);
   @include mq("md") {
-    font-size: min(vw($full,16),rem(16));
-    bottom: rem(33);
-    left: rem(14);
+    font-size: max(rem(10), 10px);
+  }
+  @include mq("ml") {
+    font-size: max(rem(14), 14px);
+  }
+  @include mq("xl") {
+    font-size: max(rem(16), 16px);
   }
 }
 
-.p-contact__deco-texts:nth-child(2) .p-contact__deco-text{
+.p-contact__deco-texts:nth-child(2) .p-contact__deco-text {
   margin-top: rem(13);
   @include mq("md") {
-    margin-top: min(vw($full,13),rem(13));
+    margin-top: min(vw($full, 13), rem(13));
   }
 }

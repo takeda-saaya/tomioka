@@ -1,24 +1,29 @@
 @use "global" as *;
 
-.p-archive-fruits__title{
+.p-archive-fruits__inner {
+  max-width: 100%;
+}
+
+.p-archive-fruits__title {
   color: $red;
   font-family: $second-font-family;
-  line-height: 1; 
+  line-height: 1;
   letter-spacing: 1.24px;
   text-align: center;
   font-size: rem(50);
-@include mq("md") {
-  font-size: rem(62);
+  @include mq("md") {
+    font-size: rem(62);
   }
 }
 
-.p-archive-fruits__items{
+.p-archive-fruits__items {
   display: grid;
   margin-top: rem(40);
-  gap: rem(40);
+  gap: rem(56);
+  grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
   @include mq("md") {
     margin-top: rem(60);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     row-gap: rem(73);
     column-gap: rem(40);
   }

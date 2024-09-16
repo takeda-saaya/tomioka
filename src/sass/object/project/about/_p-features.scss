@@ -1,17 +1,24 @@
 @use "global" as *;
 
-.p-features{
+.p-features {
   padding-bottom: rem(60);
   @include mq("md") {
     padding-bottom: rem(130);
   }
 }
 
-.p-features__title__box{
+.p-features__inner {
+  @include mq("md") {
+    max-width: rem(1440);
+    margin-inline: auto;
+  }
+}
+
+.p-features__title__box {
   text-align: center;
 }
 
-.p-features__cards{
+.p-features__cards {
   display: grid;
   margin-top: rem(40);
   gap: rem(50);

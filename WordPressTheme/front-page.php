@@ -91,7 +91,7 @@
         </a>
       </div>
       <div class="p-fruits__btn">
-        <a href="<?php echo esc_url(home_url('/fruits')); ?>" class="c-main-btn">果物一覧をみる</a>
+        <a href="<?php echo esc_url(get_post_type_archive_link('fruits-list')); ?>" class="c-main-btn">果物一覧をみる</a>
       </div>
     </div>
   </section>
@@ -151,99 +151,99 @@
   </section>
 
   <!--  service   -->
-  <section id="service" class="l-service p-service">
+  <section class="l-service p-service">
     <div class="p-service__swiper">
       <div class="p-service__wrap">
         <ul class="p-service__list p-service__list--left">
           <li class="p-service__item p-service__item--big">
             <div class="p-service__anime p-anime-fuwafuwa1">
-              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper1.png'); ?>" alt="女性がリンゴを丸かじりしている" width="223" height="229" loading="lazy">
+              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper1.png'); ?>" alt="女性がリンゴを丸かじりしている" width="223" height="229">
             </div>
           </li>
           <li class="p-service__item">
             <div class="p-service__anime p-anime-fuwafuwa2">
-              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper3.png'); ?>" alt="木にみかんがたくさん実っている" width="125" height="123" loading="lazy">
+              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper3.png'); ?>" alt="木にみかんがたくさん実っている" width="125" height="123">
             </div>
           </li>
           <li class="p-service__item p-service__item--big">
             <div class="p-service__anime p-anime-fuwafuwa3">
-              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper2.png'); ?>" alt="沢山の桃がある" width="223" height="229" loading="lazy">
+              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper2.png'); ?>" alt="沢山の桃がある" width="223" height="229">
             </div>
           </li>
           <li class="p-service__item">
             <div class="p-service__anime p-anime-fuwafuwa4">
-              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper4.png'); ?>" alt="男性と女の子が笑いあってブドウを持っている" width="125" height="123" loading="lazy">
+              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper4.png'); ?>" alt="男性と女の子が笑いあってブドウを持っている" width="125" height="123">
             </div>
           </li>
           <li class="p-service__item">
             <div class="p-service__anime p-anime-fuwafuwa5">
-              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper5.png'); ?>" alt="木にブドウがたくさん実っている" width="223" height="229" loading="lazy">
+              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper5.png'); ?>" alt="木にブドウがたくさん実っている" width="223" height="229">
             </div>
           </li>
         </ul>
         <ul class="p-service__list p-service__list--left">
           <li class="p-service__item p-service__item--big">
             <div class="p-service__anime p-anime-fuwafuwa1">
-              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper1.png'); ?>" alt="女性がリンゴを丸かじりしている" width="223" height="229" loading="lazy">
+              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper1.png'); ?>" alt="女性がリンゴを丸かじりしている" width="223" height="229">
             </div>
           </li>
           <li class="p-service__item">
             <div class="p-service__anime p-anime-fuwafuwa2">
-              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper3.png'); ?>" alt="木にみかんがたくさん実っている" width="125" height="123" loading="lazy">
+              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper3.png'); ?>" alt="木にみかんがたくさん実っている" width="125" height="123">
             </div>
           </li>
           <li class="p-service__item p-service__item--big">
             <div class="p-service__anime p-anime-fuwafuwa3">
-              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper2.png'); ?>" alt="沢山の桃がある" width="223" height="229" loading="lazy">
+              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper2.png'); ?>" alt="沢山の桃がある" width="223" height="229">
             </div>
           </li>
           <li class="p-service__item">
             <div class="p-service__anime p-anime-fuwafuwa4">
-              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper4.png'); ?>" alt="男性と女の子が笑いあってブドウを持っている" width="125" height="123" loading="lazy">
+              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper4.png'); ?>" alt="男性と女の子が笑いあってブドウを持っている" width="125" height="123">
             </div>
           </li>
           <li class="p-service__item">
             <div class="p-service__anime p-anime-fuwafuwa5">
-              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper5.png'); ?>" alt="木にブドウがたくさん実っている" width="223" height="229" loading="lazy">
+              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper5.png'); ?>" alt="木にブドウがたくさん実っている" width="223" height="229">
             </div>
           </li>
         </ul>
         <ul class="p-service__list p-service__list--left">
           <li class="p-service__item p-service__item--big">
             <div class="p-service__anime p-anime-fuwafuwa1">
-              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper1.png'); ?>" alt="女性がリンゴを丸かじりしている" width="223" height="229" loading="lazy">
+              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper1.png'); ?>" alt="女性がリンゴを丸かじりしている" width="223" height="229">
             </div>
           </li>
           <li class="p-service__item">
             <div class="p-service__anime p-anime-fuwafuwa2">
-              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper3.png'); ?>" alt="木にみかんがたくさん実っている" width="125" height="123" loading="lazy">
+              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper3.png'); ?>" alt="木にみかんがたくさん実っている" width="125" height="123">
             </div>
           </li>
           <li class="p-service__item p-service__item--big">
             <div class="p-service__anime p-anime-fuwafuwa3">
-              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper2.png'); ?>" alt="沢山の桃がある" width="223" height="229" loading="lazy">
+              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper2.png'); ?>" alt="沢山の桃がある" width="223" height="229">
             </div>
           </li>
           <li class="p-service__item">
             <div class="p-service__anime p-anime-fuwafuwa4">
-              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper4.png'); ?>" alt="男性と女の子が笑いあってブドウを持っている" width="125" height="123" loading="lazy">
+              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper4.png'); ?>" alt="男性と女の子が笑いあってブドウを持っている" width="125" height="123">
             </div>
           </li>
           <li class="p-service__item">
             <div class="p-service__anime p-anime-fuwafuwa5">
-              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper5.png'); ?>" alt="木にブドウがたくさん実っている" width="223" height="229" loading="lazy">
+              <img src="<?php echo get_theme_file_uri('assets/images/top/service-swiper5.png'); ?>" alt="木にブドウがたくさん実っている" width="223" height="229">
             </div>
           </li>
         </ul>
       </div>
     </div>
-    <div class="p-service__inner">
-      <div class="p-service__title__box p-title-box">
+    <div id="sales" class="p-service__inner">
+      <div id="service" class="p-service__title__box p-title-box">
         <p class="p-title__sub">service</p>
         <h2 class="p-title__main">自然農園冨岡のサービス</h2>
       </div>
       <div class="p-service__cards">
-        <div id="sales" class="p-service__card p-service-card">
+        <div class="p-service__card p-service-card">
           <div class="p-service-card__img">
             <img src="<?php echo get_theme_file_uri('assets/images/top/service-card1.jpg'); ?>" alt="果物売り場にみかんやリンゴが沢山並べてある" width="335" height="263" loading="lazy">
           </div>
@@ -255,7 +255,7 @@
               </picture>
               <h3 class="p-service-card__title">直売</h3>
             </div>
-            <p class="p-service-card__text">当日の朝に採れた新鮮な果物を直売しております。<br>「鮮度が変わるだけでこんなに変わるの？」というくらい、新鮮な果物は美味しいです。
+            <p class="p-service-card__text">当日の朝に採れた新鮮な果物を直売しております。<br>「鮮度が違うだけでこんなに変わるの？」というくらい、新鮮な果物は美味しいです。
               小布施で直売所を探している方、<br class="u-hidden-pc"> ぜひ自然農園富岡にお越しください。</p>
             <div class="p-service-card__link">
               <a href="<?php echo esc_url(home_url('/about/#access')); ?>">自然農園富岡のアクセス情報はこちら</a>
@@ -285,12 +285,11 @@
               </picture>
               <h3 class="p-service-card__title">もぎ取り体験</h3>
             </div>
-            <p class="p-service-card__text">りんご・もものもぎ取り体験を行なっております。お子様連れのご家族・恋人同士・
-              ご夫婦どなたとでもお楽しみになれます。<br>
-              自然豊かな小布施だから体験できるもぎ取りに参加してみませんか？<br>
-              特典として、お土産&plus;試食で計4つ該当の果物プレゼント&#33;</p>
+            <p class="p-service-card__text">りんご・もものもぎ取り体験を行なっております。お子様連れのご家族・カップル・ご夫婦どなたとでもお楽しみになれます。<br>
+              自然豊かな小布施だからこそ体験できるもぎ取りに参加してみませんか？<br>
+              特典として、お土産&plus;試食で4つの果物プレゼント&#33;</p>
             <div class="p-service-card__btn">
-              <button id="js-service-modal-open1" class="c-main-btn">もぎ取り料金を確認する</button>
+              <button id="js-service-modal-open1" class="c-modal-btn">もぎ取り料金を確認する</button>
             </div>
           </div>
         </div>
@@ -300,7 +299,7 @@
           <div class="l-inner p-service-modal__inner">
             <div class="p-service-modal__boxs">
               <div class="p-service-modal__box p-modal-box">
-                <h2 class="p-modal-box__title">りんご狩り</h2>
+                <h4 class="p-modal-box__title">りんご狩り</h4>
                 <table class="p-modal-box__table">
                   <tbody class="p-modal-box__body">
                     <tr class="p-modal-box__row">
@@ -328,13 +327,14 @@
                       <th class="p-modal-box__hed">備考</th>
                       <td class="p-modal-box__data">・事前予約は必須ではありませんが、
                         予約された方を優先的にご案内いたします。<br>
-                        ・りんごは量り売りとなります。</td>
+                        <span>・りんごは量り売りとなります。</span>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
               <div class="p-service-modal__box p-modal-box">
-                <h2 class="p-modal-box__title p-modal-box__title--pink">もも狩り</h2>
+                <h4 class="p-modal-box__title p-modal-box__title--pink">もも狩り</h4>
                 <table class="p-modal-box__table">
                   <tbody class="p-modal-box__body">
                     <tr class="p-modal-box__row">
@@ -359,7 +359,7 @@
                     </tr>
                     <tr class="p-modal-box__row">
                       <th class="p-modal-box__hed p-modal-box__hed--pink">備考</th>
-                      <td class="p-modal-box__data">・事前予約が必須になります。</td>
+                      <td class="p-modal-box__data"><span>・事前予約が必須になります。</span></td>
                     </tr>
                   </tbody>
                 </table>
@@ -400,7 +400,7 @@
           <div class="l-inner p-delivery-modal__inner">
             <div class="p-delivery-modal__boxs">
               <div class="p-delivery-modal__box p-delivery-box">
-                <h2 class="p-delivery-box__title">配送の流れ</h2>
+                <h4 class="p-delivery-box__title">配送の流れ</h4>
                 <div class="p-delivery-box__text-wrap">
                   <div class="p-delivery-box__text-box">
                     <span class="p-delivery-box__namber">
@@ -424,7 +424,7 @@
                 </div>
               </div>
               <div class="p-delivery-modal__box p-delivery-box">
-                <h2 class="p-delivery-box__title">配送料金について</h2>
+                <h4 class="p-delivery-box__title">配送料金について</h4>
                 <div class="p-delivery-box__text-wrap">
                   <p class="p-delivery-box__text">基本的に送料は1,500円程度となりますが、注文商品の重さによっても変わってきますので<br>
                     詳しくはお問い合わせ後のメールにてご案内いたします。<br>
@@ -432,7 +432,7 @@
                 </div>
               </div>
               <div class="p-delivery-modal__box p-delivery-box">
-                <h2 class="p-delivery-box__title">返品・交換について</h2>
+                <h4 class="p-delivery-box__title">返品・交換について</h4>
                 <div class="p-delivery-box__text-wrap">
                   <p class="p-delivery-box__text">原則として食料品の返品はご容赦下さい。 不良品の場合まことに申し訳ございません。<br>
                     商品につきましては充分注意をしておりますが、万が一不良品がございましたら、<br>
@@ -442,7 +442,7 @@
             </div>
             <div class="p-delivery-modal__btns">
               <div class="p-delivery-modal__btn1">
-                <a href="<?php echo esc_url(home_url('/fruits/#assortment')); ?>news" class="c-modal-btn">人気の配送商品を確認する</a>
+                <a href="<?php echo esc_url(get_post_type_archive_link('fruits-list')) . '#assortment'; ?>" class="c-modal-btn">人気の配送商品を確認する</a>
               </div>
               <div class="p-delivery-modal__btn2">
                 <button id="js-service-modal-close2" class="c-modal-btn c-modal-btn--white">閉じる</button>
@@ -462,7 +462,7 @@
         <h2 class="p-title__main p-title__main--white">お客様の声</h2>
       </div>
       <p class="p-voice__text">自然農園冨岡に訪れてくださった<br class="u-hidden-pc">お客様の声をお届けします。<br>
-        皆様のご来訪をスタッフ一同心より<br class="u-hidden-pc">お待ちしております。</p>
+        皆様のご来訪をスタッフ一同、心より<br class="u-hidden-pc">お待ちしております。</p>
       <div class="p-voice-swiper__content">
         <div class="swiper p-voice-swiper">
           <div class="swiper-wrapper">
@@ -585,6 +585,9 @@
           wp_reset_postdata();
         endif;
     ?>
+    <div class="p-news__btn">
+      <a href="<?php echo esc_url(home_url('/news')); ?>" class="c-main-btn">お知らせ一覧をみる</a>
+    </div>
     </div>
     </div>
   </section>

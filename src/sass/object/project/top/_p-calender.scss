@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.p-calender{
+.p-calender {
   z-index: 800;
   padding-top: rem(40);
   @include mq("md") {
@@ -8,10 +8,10 @@
   }
 }
 
-.p-calender::before{
-  position: absolute; 
-  content: '';
-  top: vw(375,-40);
+.p-calender::before {
+  position: absolute;
+  content: "";
+  top: vw(375, -40);
   left: 0;
   background-size: cover;
   background-position: top left;
@@ -22,50 +22,50 @@
   z-index: -1;
   @include mq("md") {
     background-image: url(".././images/top/calender-bg-white__pc.png");
-    top: vw($full,-85);
+    top: vw($full, -85);
   }
 }
 
-.p-calender__inner{
+.p-calender__inner {
   padding: 0;
   @include mq("md") {
     max-width: 1260px + strip-unit($padding-pc) * 2;
   }
 }
 
-.p-calender__wrap{
+.p-calender__wrap {
   padding: rem(90) 0 rem(40);
   background-image: url(".././images/top/calender-bg__sp.png");
   background-position: top left;
-  background-repeat: no-repeat ;
+  background-repeat: no-repeat;
   background-size: cover;
   filter: drop-shadow(0px 6px 18px rgba(0, 0, 0, 0.12));
   @include mq("md") {
-    padding:rem(116)  0  rem(98);
+    padding: rem(128) 0 rem(98);
     background-image: url(".././images/top/calender-bg__pc.png");
     text-align: center;
     filter: none;
   }
 }
 
-.p-calender__title__box{
+.p-calender__title__box {
   text-align: center;
 }
 
-.p-calender__text{
+.p-calender__text {
   font-weight: $medium;
-  line-height: 2; 
+  line-height: 2;
   letter-spacing: 0.32px;
-  margin-top: rem(4);
+  margin-top: rem(14);
   padding: 0 rem(36) 0 rem(30);
   @include mq("md") {
     line-height: 2.2;
     text-align: left;
-    display: inline-block
+    display: inline-block;
   }
 }
 
-.p-calender__btns{
+.p-calender__btns {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -82,7 +82,8 @@
 .p-calender__container {
   white-space: nowrap;
   margin-top: rem(34);
-  overflow: scroll;
+  overflow-x: auto; /* 横スクロールは有効 */
+  overflow-y: hidden; /* 縦スクロールを無効化 */
   @include mq("md") {
     margin-top: rem(50);
   }
@@ -91,7 +92,12 @@
   }
 }
 
-.p-calender__box{
+/*スクロールバー非表示（Chrome・Safari）*/
+.p-calender__container::-webkit-scrollbar {
+  width: 0; /* これで縦スクロールバーを消します */
+}
+
+.p-calender__box {
   display: inline-block;
   min-width: rem(880);
   padding-left: rem(10);
@@ -101,15 +107,15 @@
   }
 }
 
-.p-calender__name{
+.p-calender__name {
   font-size: rem(18);
   font-style: normal;
   font-weight: $bold;
-  line-height: 1.6; 
+  line-height: 1.6;
   letter-spacing: 0.36px;
 }
 
-.p-calender__hed{
+.p-calender__hed {
   z-index: 4;
   display: flex;
   padding-left: rem(53);
@@ -124,23 +130,23 @@
   }
 }
 
-.p-calender__hed-left{
+.p-calender__hed-left {
   @include mq("md") {
     margin-left: rem(67);
   }
 }
 
-.p-calender__heading{
+.p-calender__heading {
   width: rem(281);
   text-align: center;
   font-weight: $bold;
-  line-height: 1.6; 
+  line-height: 1.6;
   letter-spacing: 0.36px;
   text-align: center;
   padding: rem(10) 0;
-  border-top: 1px solid #DBDBDB;
-  border-right: 1px solid #DBDBDB;
-  border-left: 1px solid #DBDBDB;  
+  border-top: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
   background-color: $white;
   @include mq("md") {
     font-size: rem(18);
@@ -149,34 +155,34 @@
   }
 }
 
-.p-calender__hed-right{
+.p-calender__hed-right {
   display: flex;
-  border-top: 1px solid #DBDBDB;
-  border-right: 1px solid #DBDBDB;
+  border-top: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb;
 }
 
-.p-calender__hed-text{
+.p-calender__hed-text {
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: $bold;
-  line-height: 1.6; 
+  line-height: 1.6;
   letter-spacing: 0.36px;
   background-color: $beige;
-  border-left: 1px solid #DBDBDB;
+  border-left: 1px solid #dbdbdb;
   width: rem(94);
   @include mq("md") {
-    font-size: min(vw($full,18),rem(18));
+    font-size: min(vw($full, 18), rem(18));
     padding: rem(13) rem(10);
     width: rem(115.3);
   }
 }
 
-.p-calender__hed-text.p-calender__hed-text--bg{
+.p-calender__hed-text.p-calender__hed-text--bg {
   background-color: $white;
 }
 
-.p-calender__body{
+.p-calender__body {
   display: flex;
   height: rem(1083);
   @include mq("md") {
@@ -184,7 +190,7 @@
   }
 }
 
-.p-calender__left{
+.p-calender__left {
   width: rem(54);
   height: inherit;
   @include mq("md") {
@@ -197,13 +203,14 @@
 .p-calender__nectarine,
 .p-calender__plum,
 .p-calender__chestnut,
-.p-calender__grape{
+.p-calender__grape {
+  line-height: 1.6;
   color: $white;
   text-align: start;
   font-weight: $bold;
-  line-height: 1.6; 
+  line-height: 1.6;
   letter-spacing: 0.36px;
-  border: 1px #DBDBDB;
+  border: 1px #dbdbdb;
   @include mq("md") {
     font-size: rem(18);
   }
@@ -213,12 +220,12 @@
 .p-calender__peach,
 .p-calender__plum,
 .p-calender__chestnut,
-.p-calender__grape{
+.p-calender__grape {
   writing-mode: vertical-rl;
   text-orientation: upright;
 }
 
-.p-calender__apple{
+.p-calender__apple {
   background-color: $red;
   padding: rem(15) rem(15) rem(10) rem(15);
   height: 48%;
@@ -227,7 +234,7 @@
   }
 }
 
-.p-calender__peach{
+.p-calender__peach {
   background-color: $pink;
   padding: rem(15) rem(15) rem(10) rem(15);
   height: 20%;
@@ -236,10 +243,10 @@
   }
 }
 
-.p-calender__nectarine{
-  background: #BA2B34;
+.p-calender__nectarine {
+  background: #ba2b34;
   font-weight: 700;
-  line-height: 1.1; 
+  line-height: 1.1;
   letter-spacing: -0.52px;
   padding: rem(15) rem(15) rem(5) rem(5);
   font-size: rem(10);
@@ -250,8 +257,8 @@
   }
 }
 
-.p-calender__plum{
-  background-color:#9047A2;
+.p-calender__plum {
+  background-color: #9047a2;
   padding: rem(15) rem(15) rem(10) rem(15);
   height: 12.1%;
   @include mq("md") {
@@ -259,8 +266,8 @@
   }
 }
 
-.p-calender__chestnut{
-  background-color:#8C5E29;
+.p-calender__chestnut {
+  background-color: #8c5e29;
   padding: rem(15) rem(15) rem(10) rem(15);
   height: 8%;
   @include mq("md") {
@@ -268,8 +275,8 @@
   }
 }
 
-.p-calender__grape{
-  background-color:#7152B4;
+.p-calender__grape {
+  background-color: #7152b4;
   padding: rem(15) rem(15) rem(10) rem(15);
   height: 8.1%;
   @include mq("md") {

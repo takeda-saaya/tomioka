@@ -1,22 +1,20 @@
 @use "global" as *;
 
-.p-mv__img{
+.p-mv__img {
   width: 100%;
   height: rem(673);
   aspect-ratio: 375/673;
   @include mq("md") {
-    height: rem(889);
+    height: vw($full, 889);
     aspect-ratio: 1440/889;
   }
 }
 
-.p-mv__img img{
+.p-mv__img img {
   height: 100%;
-  object-fit: cover; 
-  object-position: -210px center; 
+  object-fit: cover;
+  object-position: -210px center;
   @include mq("md") {
-    object-position: top center; 
+    object-position: top center;
   }
 }
-
-

@@ -8,24 +8,28 @@
   padding: rem(108) 0 rem(80);
   border: none;
   background-color: transparent;
-   overflow-y: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    }
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  max-width: 94%;
+}
 
 .p-service-modal::-webkit-scrollbar {
-    display:none;
-    @include mq("md") {
-      padding: rem(227) 0 rem(100);
-    }
+  display: none;
+  @include mq("md") {
+    padding: rem(227) 0 rem(100);
+  }
 }
 
 .p-service-modal::backdrop {
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
 }
 
+.p-service-modal__inner {
+  padding: 0;
+}
 
-.p-service-modal__boxs{
+.p-service-modal__boxs {
   display: grid;
   gap: rem(58);
   @include mq("md") {
@@ -34,7 +38,7 @@
   }
 }
 
-.p-service-modal__btns{
+.p-service-modal__btns {
   display: flex;
   flex-direction: column;
   align-items: center;

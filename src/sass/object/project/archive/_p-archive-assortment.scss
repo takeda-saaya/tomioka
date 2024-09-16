@@ -7,6 +7,10 @@
   }
 }
 
+.p-archive-assortment__inner {
+  max-width: 100%;
+}
+
 .p-archive-assortment__titles {
   text-align: center;
 }
@@ -62,10 +66,12 @@
 .p-archive-assortment__items {
   display: grid;
   margin-top: rem(40);
-  gap: rem(40);
+  gap: rem(30);
+  grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
   @include mq("md") {
     margin-top: rem(60);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: rem(56);
     row-gap: rem(73);
     column-gap: rem(40);
   }

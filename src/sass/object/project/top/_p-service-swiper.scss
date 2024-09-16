@@ -43,7 +43,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-170px);
+    transform: translateY(-150px);
   }
 }
 
@@ -63,7 +63,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-300px);
+    transform: translateY(-100px);
   }
 }
 
@@ -83,7 +83,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-80px);
+    transform: translateY(-150px);
   }
 }
 
@@ -108,7 +108,6 @@
 }
 
 .p-anime-fuwafuwa1 {
-  will-change: transform;
   animation: fuwafuwa1__sp 10s infinite;
   @include mq("md") {
     animation: fuwafuwa1__pc 15s infinite;
@@ -116,34 +115,30 @@
 }
 
 .p-anime-fuwafuwa2 {
-  will-change: transform;
   animation: fuwafuwa2__sp 7s infinite;
   @include mq("md") {
-    animation: fuwafuwa2__pc 10s infinite;
+    animation: fuwafuwa2__pc 25s infinite;
   }
 }
 
 .p-anime-fuwafuwa3 {
-  will-change: transform;
   animation: fuwafuwa3__sp 6s infinite;
   @include mq("md") {
-    animation: fuwafuwa3__pc 13s infinite;
+    animation: fuwafuwa3__pc 8s infinite;
   }
 }
 
 .p-anime-fuwafuwa4 {
-  will-change: transform;
   animation: fuwafuwa4__sp 10s infinite;
   @include mq("md") {
-    animation: fuwafuwa4__pc 20s infinite;
+    animation: fuwafuwa4__pc 11s infinite;
   }
 }
 
 .p-anime-fuwafuwa5 {
-  will-change: transform;
   animation: fuwafuwa5__sp 6s infinite;
   @include mq("md") {
-    animation: fuwafuwa5__pc 15s infinite;
+    animation: fuwafuwa5__pc 20s infinite;
   }
 }
 
@@ -168,9 +163,9 @@
 }
 
 .p-service__list--left {
-  animation: infinity-scroll-left 60s infinite linear 0.5s both;
+  animation: infinity-scroll-left 15s infinite linear 0.5s both;
   @include mq("md") {
-    animation: infinity-scroll-left 90s infinite linear 0.5s both;
+    animation: infinity-scroll-left 15s infinite linear 0.5s both;
   }
 }
 
@@ -194,4 +189,8 @@
   @include mq("md") {
     width: rem(380);
   }
+}
+
+.infiniteslide_wrap {
+  overflow: visible !important;
 }

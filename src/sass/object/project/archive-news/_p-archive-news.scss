@@ -1,18 +1,23 @@
 @use "global" as *;
 
-.p-archive-news{
-  padding-bottom: rem(60);
+.p-archive-news {
+  padding-bottom: rem(64);
   @include mq("md") {
     padding-bottom: rem(130);
   }
 }
 
-.p-archive-news__items{
+.p-archive-news__inner {
+  max-width: 100%;
+}
+
+.p-archive-news__items {
   display: grid;
   gap: rem(34);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   @include mq("md") {
-    grid-template-columns: repeat(3, 1fr); 
-    gap: rem(75); 
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(75);
     row-gap: rem(85);
   }
 }

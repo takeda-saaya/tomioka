@@ -3,63 +3,63 @@
 .p-dropdown-toggle {
   cursor: pointer;
   display: inline-block;
-  padding: 0 min(vw($full,37),rem(37)) 0 min(vw($full,21),rem(21));
+  padding: 0 min(vw($full, 37), rem(37)) 0 min(vw($full, 21), rem(21));
   min-height: inherit;
   display: flex;
   align-items: center;
   font-family: fot-tsukuardgothic-std, sans-serif;
-  font-size: min(vw($full, 18), rem(18));
+  font-size: min(vw(1024, 16), rem(18));
   font-weight: $bold;
   line-height: 1;
 }
 
 .p-dropdown-toggle::after {
-  content: '';
+  content: "";
   display: inline-block;
-  width: min(vw($full,10),rem(10));
-  height: min(vw($full,7),rem(7));
+  width: min(vw($full, 10), rem(10));
+  height: min(vw($full, 7), rem(7));
   background-image: url(".././images/common/dropdown-arrow.png");
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  right: min(vw($full,21),rem(21));
+  right: min(vw($full, 21), rem(21));
   top: rem(41);
-  transition: transform 0.3s ease
+  transition: transform 0.3s ease;
 }
 
 .p-dropdown-toggle:hover::after {
   transform: rotate(180deg);
 }
 
-.p-sp-nav__item .p-dropdown-toggle{
+.p-sp-nav__item .p-dropdown-toggle {
   padding: 0;
 }
 
 .p-dropdown-menu {
   display: none;
-  width: min(vw(375,60),rem(80));
+  width: min(vw(375, 60), rem(80));
   position: absolute;
   border-radius: 0px 0px 20px 20px;
-  background: $white; 
+  background: $white;
   padding: rem(10);
   top: rem(18);
   left: rem(83);
   transition: transform 0.3s ease;
   @include mq("md") {
-    width: min(vw($full,170),rem(170));
-    padding: min(vw($full,32),rem(32)) rem(10);
+    width: min(vw($full, 170), rem(170));
+    padding: min(vw($full, 32), rem(32)) rem(10);
     top: 100%;
-    right: min(vw($full,-21),rem(-21));
+    right: min(vw($full, -21), rem(-21));
     left: auto;
   }
 }
 
 .p-pc-nav__item-dropdown:hover .p-dropdown-menu {
   display: grid;
-  gap: min(vw($full,32),rem(32));
+  gap: min(vw($full, 32), rem(32));
 }
 
-.p-dropdown__trigger{
+.p-dropdown__trigger {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,11 +70,10 @@
 
 .p-dropdown__trigger a {
   display: inline-block;
-  font-family: fot-tsukuardgothic-std, sans-serif;;
-  font-size: min(vw($full,18),rem(18));
-  font-style: normal; 
+  font-family: fot-tsukuardgothic-std, sans-serif;
+  font-size: min(vw($full, 18), rem(18));
+  font-style: normal;
   font-weight: $bold;
-  line-height: 1; 
+  line-height: 1;
   padding: 0;
 }
-

@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.p-news-item{
+.p-news-item {
   position: relative;
   @include mq("md") {
     display: flex;
@@ -9,7 +9,7 @@
   }
 }
 
-.recent-post.p-news-item::before{
+.recent-post.p-news-item::before {
   content: "";
   position: absolute;
   top: rem(-31);
@@ -30,10 +30,11 @@
     top: rem(-33);
     left: rem(10);
   }
-} 
+}
 
 @keyframes wobble {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(0deg);
   }
   25% {
@@ -47,27 +48,27 @@
   }
 }
 
-
-.p-news-item a{
-  display: flex;
-  gap: rem(16);
+.p-news-item a {
   @include mq("md") {
     flex-direction: column;
     gap: 0;
   }
 }
 
-.p-news-item a:hover{
-  .p-news-item__img img{
+.p-news-item a:hover {
+  .p-news-item__img img {
     transform: scale(1.1, 1.1);
   }
 }
 
-.p-news-item__text-box{
+.p-news-item__text-box {
   display: flex;
   flex-direction: column;
-  width: rem(222);
+  width: 222px;
   flex: 1;
+  gap: rem(5);
+  margin-top: rem(10);
+
   @include mq("md") {
     width: 100%;
     gap: rem(9);
@@ -75,10 +76,10 @@
   }
 }
 
-.p-news-item__img{
+.p-news-item__img {
   width: 100%;
-  max-width: rem(146);
-  aspect-ratio: 146/122;
+  max-width: rem(355);
+  aspect-ratio: 317/223;
   overflow: hidden;
   @include mq("md") {
     max-width: rem(317);
@@ -86,14 +87,14 @@
   }
 }
 
-.p-news-item__img img{
+.p-news-item__img img {
   height: 100%;
   object-position: top left;
-  transition: transform .6s ease;
+  transition: transform 0.6s ease;
 }
 
 .p-news-item__img,
-.p-news-item__img img{
+.p-news-item__img img {
   border-radius: 14px;
 }
 
@@ -102,25 +103,24 @@
   align-items: start;
   gap: 1.5rem;
   justify-content: space-between;
+  flex-direction: row-reverse;
   @include mq("md") {
-    flex-direction: row-reverse;
     gap: rem(16);
     justify-content: start;
-    gap: rem(16);
   }
 }
 
-.p-news-item__date{
-  line-height: 1.8; 
+.p-news-item__date {
+  line-height: 1.8;
   letter-spacing: 0.32px;
   font-size: rem(16);
 }
 
-.p-news-item__cat{
-  color: $white;
+.p-news-item__cat {
   font-size: rem(14);
+  color: $white;
   font-weight: $medium;
-  line-height: 1; 
+  line-height: 1;
   letter-spacing: 0.28px;
   border-radius: 100px;
   background: $brown;
@@ -132,14 +132,12 @@
   }
 }
 
-.p-news-item__title{
+.p-news-item__title {
   font-weight: $medium;
-  line-height: 1.6; 
+  line-height: 1.6;
   letter-spacing: 0.36px;
-  font-size: rem(16);
-  margin-top: 1rem;
+  font-size: 16px;
   @include mq("md") {
     font-size: rem(18);
-    margin-top: 0;
   }
 }

@@ -10,7 +10,7 @@
         </div>
         <div class="p-sub-mv__title-box p-sub-title-box p-title-box--bg">
           <p class="p-sub-title__top">contact thanks</p>
-          <h2 class="p-sub-title__bottom">お問い合わせ完了</h2>
+          <h1 class="p-sub-title__bottom">お問い合わせ完了</h1>
         </div>
       </div>
 

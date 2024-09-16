@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.p-delivery-modal{
+.p-delivery-modal {
   position: fixed;
   top: 0;
   inset: 0;
@@ -11,20 +11,25 @@
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  max-width: 94%;
 }
 
 .p-delivery-modal::-webkit-scrollbar {
-  display:none;
+  display: none;
   @include mq("md") {
     padding: rem(240) 0 rem(211);
-    }
   }
-
-.p-delivery-modal::backdrop {
-  background: rgba(0,0,0,0.5);
 }
 
-.p-delivery-modal__boxs{
+.p-delivery-modal::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.p-delivery-modal__inner {
+  padding: 0;
+}
+
+.p-delivery-modal__boxs {
   display: grid;
   gap: rem(20);
 }

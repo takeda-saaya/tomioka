@@ -1,0 +1,7 @@
+@use "global" as *;
+.p-single-block {
+  padding-top: rem(80);
+  @include mq("md") {
+    padding-top: rem(129);
+  }
+}

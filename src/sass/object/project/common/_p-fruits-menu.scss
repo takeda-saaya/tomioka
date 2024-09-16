@@ -3,7 +3,7 @@
 .p-fruits-menu {
   border-radius: 30px;
   background: $white;
-  padding: rem(20) rem(50) rem(20) rem(50);
+  padding: rem(20) rem(32) rem(28) rem(32);
   @include mq("md") {
     padding: rem(36) rem(110) rem(46) rem(105);
   }
@@ -12,28 +12,29 @@
 .p-fruits-menu__wrap {
   display: flex;
   flex-direction: column;
-  @include mq("md") {
+  @include mq("sl") {
     flex-direction: row;
     align-items: end;
     justify-content: center;
+    gap: rem(30);
+  }
+  @include mq("md") {
     gap: rem(76);
   }
 }
 
 .p-fruits-menu__title-box {
   display: grid;
-  @include mq("md") {
-  }
 }
 
 .p-fruits-menu__en-title {
-  text-transform: capitalize;
+  text-transform: uppercase;
   color: $red;
   font-family: lato, sans-serif;
   font-weight: $bold;
   line-height: 1.2;
   letter-spacing: 0.64px;
-  font-size: rem(12);
+  font-size: rem(14);
   @include mq("md") {
     font-size: rem(16);
   }
@@ -47,7 +48,7 @@
   font-weight: $bold;
   line-height: 1.8;
   letter-spacing: 1.28px;
-  font-size: rem(18);
+  font-size: rem(24);
   @include mq("md") {
     font-size: rem(32);
   }
@@ -55,7 +56,7 @@
 
 .p-fruits-menu__boxs {
   display: flex;
-  gap: rem(5);
+  gap: rem(12.8);
   margin-top: rem(10);
   justify-content: center;
   @include mq("md") {

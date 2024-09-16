@@ -3,28 +3,40 @@
     <div class="p-footer__body">
       <ul class="p-footer__items">
         <li class="p-footer__item">
-          <a href="<?php echo esc_url(home_url('/about')); ?>">私たちについて</a>
-          <a href="<?php echo esc_url(home_url('/about')); ?>">about</a>
+          <a href="<?php echo esc_url(home_url('/about')); ?>">
+            <p>私たちについて</p>
+            <p>about</p>
+          </a>
         </li>
         <li class="p-footer__item">
-          <a href="<?php echo esc_url(home_url('/about/#access')); ?>">アクセス</a>
-          <a href="<?php echo esc_url(home_url('/about/#access')); ?>">access</a>
+          <a href="<?php echo esc_url(home_url('/about/#access')); ?>">
+            <p>アクセス</p>
+            <p>access</p>
+          </a>
         </li>
         <li class="p-footer__item">
-          <a href="<?php echo esc_url(home_url('/#sales')); ?>">サービス</a>
-          <a href="<?php echo esc_url(home_url('/#sales')); ?>">service</a>
+          <a href="<?php echo esc_url(home_url('/#sales')); ?>">
+            <p>サービス</p>
+            <p>service</p>
+          </a>
         </li>
         <li class="p-footer__item">
-          <a href="<?php echo esc_url(home_url('/news')); ?>">お知らせ</a>
-          <a href="<?php echo esc_url(home_url('/news')); ?>">news</a>
+          <a href="<?php echo esc_url(home_url('/news')); ?>">
+            <p>お知らせ</p>
+            <p>news</p>
+          </a>
         </li>
         <li class="p-footer__item">
-          <a href="<?php echo esc_url(home_url('/fruits')); ?>">果物一覧</a>
-          <a href="<?php echo esc_url(home_url('/fruits')); ?>">fruit list</a>
+          <a href="<?php echo esc_url(get_post_type_archive_link('fruits-list')); ?>">
+            <p>果物一覧</p>
+            <p>fruit list</p>
+          </a>
         </li>
         <li class="p-footer__item">
-          <a href="<?php echo esc_url(home_url('/contact')); ?>">お問い合わせ</a>
-          <a href="<?php echo esc_url(home_url('/contact')); ?>">CONTACT</a>
+          <a href="<?php echo esc_url(home_url('/contact')); ?>">
+            <p>お問い合わせ</p>
+            <p>CONTACT</p>
+          </a>
         </li>
       </ul>
       <div class="p-footer__info">

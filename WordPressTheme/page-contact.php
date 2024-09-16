@@ -10,7 +10,7 @@
         </div>
         <div class="p-sub-mv__title-box p-sub-title-box p-title-box--bg">
           <p class="p-sub-title__top">contact</p>
-          <h2 class="p-sub-title__bottom">お問い合わせ</h2>
+          <h1 class="p-sub-title__bottom">お問い合わせ</h1>
         </div>
       </div>
 
@@ -29,7 +29,7 @@
   <section class="l-contact p-contact">
     <div class="p-contact__inner l-inner">
       <p class="p-contact__text">
-        もぎ取り体験の予約や配送サービス、 <br class="u-hidden-pc">その他のお問い合わせに関してお気軽にご相談ください。
+        もぎ取り体験の予約や配送サービス、<br class="u-hidden-pc">その他のお問い合わせに関して<br class="u-hidden-pc">お気軽にご相談ください。
       </p>
       <div class="p-contact__contents p-form">
         <div class="p-form__body">
@@ -42,7 +42,7 @@
         </div>
       </div>
       <div class="p-contact__bottom">
-        <p class="p-contact__text">お電話・Faxでお問い合わせの方は下記からご連絡ください。
+        <p class="p-contact__text">お電話・Faxでお問い合わせの方は<br class="u-hidden-pc">下記からご連絡ください。
         </p>
         <div class="p-contact__tels">
           <div class="p-contact__tel1">

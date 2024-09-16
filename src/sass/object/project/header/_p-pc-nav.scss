@@ -14,8 +14,8 @@
   display: flex;
   align-items: center;
   min-height: inherit;
-  padding-left: min(vw($full,45),rem(45));
-  padding-right: min(vw($full,12),rem(12));
+  padding-left: min(vw($full, 45), rem(45));
+  padding-right: min(vw($full, 12), rem(12));
 }
 
 .p-pc-nav__item {
@@ -28,39 +28,38 @@
   align-items: center;
   padding: 0 min(vw($full, 21), rem(21));
   font-family: fot-tsukuardgothic-std, sans-serif;
-  font-size: min(vw($full, 18), rem(18));
+  font-size: min(vw(1024, 16), rem(18));
   font-weight: $bold;
   line-height: 1;
 }
 
-.p-pc-nav__item > a{
+.p-pc-nav__item > a {
   position: relative;
 }
 
 .p-pc-nav__item > a::before {
-  content: '●'; 
+  content: "●";
   position: absolute;
-  left: 50%; 
+  left: 50%;
   top: 31%;
-  transform: translatex(-50%); 
-  color:transparent ; 
-  font-size: 0.25em; 
+  transform: translatex(-50%);
+  color: transparent;
+  font-size: 0.25em;
   transition: all 0.3s;
 }
 
-.p-pc-nav__item a:hover{
+.p-pc-nav__item a:hover {
   color: $red;
 }
 
 .p-pc-nav__item > a:hover::before {
-  color: $red; 
+  color: $red;
 }
 
-.p-pc-nav__btn{
-  margin-left: min(vw($full,21),rem(21));
+.p-pc-nav__btn {
+  margin-left: min(vw($full, 21), rem(21));
 }
 
 .p-pc-nav__item-dropdown {
   position: relative;
 }
-

@@ -118,6 +118,10 @@ jQuery(function ($) {
     slidesPerView: 1.34,
     spaceBetween: 14,
     centeredSlides: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
     breakpoints: {
       400: {
         slidesPerView: 1.5,
@@ -257,23 +261,6 @@ jQuery(function ($) {
       }
     });
   });
-
-  // about dropdown
-  var dropdownTrigger = document.querySelector('.js-dropdown-trigger');
-  var dropdownContent = document.querySelector('.p-about-dropdown__content');
-  if (dropdownTrigger && dropdownContent) {
-    dropdownTrigger.addEventListener('click', function (event) {
-      event.stopPropagation();
-      dropdownContent.classList.toggle('show');
-    });
-    document.addEventListener('click', function (event) {
-      if (!event.target.matches('.js-dropdown-trigger')) {
-        if (dropdownContent.classList.contains('show')) {
-          dropdownContent.classList.remove('show');
-        }
-      }
-    });
-  }
 
   // 表示アニメーション
   $(document).ready(function () {

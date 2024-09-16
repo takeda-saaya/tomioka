@@ -69,13 +69,18 @@ const cssSass = () => {
         }),
       ])
     )
-    .pipe(postcss([cssdeclsort({ order: "alphabetical" }), cssnext(browsers)]))
+    .pipe(postcss([cssdeclsort({ order: "alphabetical" }) ]))
     .pipe(mmq()) // media query mapper
+    .pipe(postcss([cssnext({
+          features : {
+              rem: false
+          }
+      },browsers)]))
     .pipe(sourcemaps.write("./"))
     .pipe(dest(destWpPath.css))
     .pipe(
       notify({
-        message: "Sassをコンパイルしました！",
+        message: "さあや頑張って偉い！Sassコンパイルしたよ！",
         onLast: true,
       })
     );
@@ -135,7 +140,7 @@ const browserSyncFunc = () => {
 
 const browserSyncOption = {
   // Localで動かすWPのサイトドメイン
-  proxy: "http://tomioka.local/",
+  proxy: "http://wpdartsassfromsprei.local/",
   open: "true",
   watchOptions: {
     debounceDelay: 1000,

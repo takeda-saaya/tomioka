@@ -1,11 +1,11 @@
 @use "global" as *;
 
-.p-features-card{
+.p-features-card {
   display: flex;
   flex-direction: column;
   @include mq("md") {
     flex-direction: row;
-    gap: min(vw($full,70),rem(70));
+    gap: min(vw($full, 70), rem(70));
     align-items: center;
   }
 }
@@ -23,7 +23,7 @@
   }
 }
 
-.p-features-card__right-box{
+.p-features-card__right-box {
   margin-top: rem(15);
   @include mq("md") {
     margin: 0;
@@ -32,113 +32,114 @@
 
 .p-features__card:nth-of-type(odd) .p-features-card__right-box {
   margin-left: auto;
+  margin-right: rem(15);
   @include mq("md") {
     margin: 0;
   }
 }
 
 .p-features__card:nth-of-type(even) .p-features-card__right-box {
-  margin-right: auto;
+  margin-left: auto;
   @include mq("md") {
     margin: 0;
-  } 
+  }
 }
 
-.p-features-card__right-box-wrap{
-  width: vw(375,330);
+.p-features-card__right-box-wrap {
+  width: min(vw(375, 330), rem(500));
   @include mq("md") {
     width: 100%;
   }
 }
 
-.p-features-card__img__wrap{
+.p-features-card__img__wrap {
   display: flex;
   justify-content: right;
 }
 
 .p-features-card__img {
   width: 100%;
-  max-width: min(vw(375,330),rem(500));
+  max-width: min(vw(375, 330), rem(500));
   aspect-ratio: 330/291;
   @include mq("md") {
-    max-width: min(vw($full,811),rem(811));
+    max-width: min(vw($full, 811), rem(811));
     aspect-ratio: 811/716;
   }
 }
 
-.p-features-card__img img{
+.p-features-card__img img {
   height: auto;
 }
 
 .p-features-card:nth-of-type(odd) {
   .p-features-card__img,
-  .p-features-card__img img{
+  .p-features-card__img img {
     border-radius: 0px 40px 40px 0px;
   }
 }
 
 .p-features-card:nth-of-type(even) {
   .p-features-card__img,
-  .p-features-card__img img{
+  .p-features-card__img img {
     border-radius: 40px 0px 0px 40px;
   }
 }
 
-.p-features-card__top{
+.p-features-card__top {
   display: flex;
-  gap: min(vw($full,6),rem(6));
+  gap: min(vw($full, 6), rem(6));
 }
 
-.p-features-card__number{
+.p-features-card__number {
   width: 100%;
   max-width: rem(50);
   aspect-ratio: 50/54;
   @include mq("md") {
-    max-width: min(vw($full,129),rem(129));
+    max-width: min(vw($full, 129), rem(129));
     aspect-ratio: 129/140;
   }
 }
 
-.p-features-card__number img{
+.p-features-card__number img {
   height: auto;
 }
 
-.p-features-card__sub-titles{
+.p-features-card__sub-titles {
   display: flex;
   flex-direction: column;
   padding-top: rem(20);
-  gap: min(vw($full,5),rem(5));
+  gap: min(vw($full, 5), rem(5));
   @include mq("md") {
-    padding-top: min(vw($full,43),rem(43));
+    padding-top: min(vw($full, 43), rem(43));
   }
 }
 
-.p-features-card__sub-title1{
+.p-features-card__sub-title1 {
   width: 100%;
   max-width: rem(100);
   aspect-ratio: 100/11;
   @include mq("md") {
-   max-width: min(vw($full,154),rem(154));
-   aspect-ratio: 154/34;
+    max-width: min(vw($full, 154), rem(154));
+    aspect-ratio: 154/34;
   }
 }
 
-.p-features-card__sub-title2{
+.p-features-card__sub-title2 {
   width: 100%;
   max-width: rem(130);
   aspect-ratio: 130/11;
   @include mq("md") {
-   max-width: min(vw($full,203),rem(203));
-   aspect-ratio: 203/34;
+    max-width: min(vw($full, 203), rem(203));
+    aspect-ratio: 203/34;
   }
 }
 
 .p-features-card__sub-title1 img,
-.p-features-card__sub-title2 img{
+.p-features-card__sub-title2 img {
   height: auto;
 }
 
-.p-features-card__title{
+.p-features-card__title {
   font-family: $second-font-family;
   line-height: 1;
   letter-spacing: 1.32px;
@@ -146,12 +147,12 @@
   display: inline-block;
   @include mq("md") {
     line-height: 1.2;
-    font-size: min(vw($full,66),rem(66));
+    font-size: min(vw($full, 66), rem(66));
     margin-top: rem(3);
   }
 }
 
-.p-features__card:first-of-type .p-features-card__title ,
+.p-features__card:first-of-type .p-features-card__title,
 .p-features__card:nth-of-type(3) .p-features-card__title {
   position: relative;
   z-index: 10;
@@ -167,49 +168,49 @@
 }
 
 .p-features__card:first-of-type .p-features-card__title::before {
-    right: 0;
-    top: rem(-20);
-    width: rem(43);
-    height: rem(47);
-    aspect-ratio: 43/47;
-  background-image: url(".././images/about/features-card-deco1.png") ;
+  right: 0;
+  top: rem(-20);
+  width: rem(43);
+  height: rem(47);
+  aspect-ratio: 43/47;
+  background-image: url(".././images/about/features-card-deco1.png");
   @include mq("md") {
-    right: min(vw($full,-55),rem(-55));
-    top: min(vw($full,-48),rem(-48));
-    width: min(vw($full,93),rem(93));
-    height: min(vw($full,97),rem(97));
+    right: min(vw($full, -55), rem(-55));
+    top: min(vw($full, -48), rem(-48));
+    width: min(vw($full, 93), rem(93));
+    height: min(vw($full, 97), rem(97));
     aspect-ratio: 91/97;
   }
 }
 
 .p-features__card:nth-of-type(3) .p-features-card__title:before {
-    right: rem(-40);
-    top: 50%;
-    transform: translateY(-50%);
-    width: rem(152);
-    height: rem(152);
-    aspect-ratio: 1/1;
-    background-image: url(".././images/about/features-card-deco2.png") ;
+  right: rem(-40);
+  top: 50%;
+  transform: translateY(-50%);
+  width: rem(152);
+  height: rem(152);
+  aspect-ratio: 1/1;
+  background-image: url(".././images/about/features-card-deco2.png");
   @include mq("md") {
-    right: min(vw($full,-84),rem(-84));
+    right: min(vw($full, -84), rem(-84));
     top: 50%;
     transform: translateY(-50%);
-    width: min(vw($full,232),rem(232));
-    height: min(vw($full,232),rem(232));
+    width: min(vw($full, 232), rem(232));
+    height: min(vw($full, 232), rem(232));
   }
 }
 
-.p-features-card__title span{
+.p-features-card__title span {
   color: $green;
 }
 
-.p-features-card__text{
+.p-features-card__text {
   font-weight: $medium;
-  line-height: 2; 
+  line-height: 2;
   letter-spacing: 0.32px;
   margin-top: rem(20);
-  font-size: rem(15);
   @include mq("md") {
-    margin-top: min(vw($full,35),rem(35));
+    margin-top: min(vw($full, 35), rem(35));
+    font-size: max(vw($full, 16), 12px);
   }
 }

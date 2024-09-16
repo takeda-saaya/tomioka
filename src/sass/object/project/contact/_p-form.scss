@@ -1,71 +1,70 @@
 @use "global" as *;
 
 .p-form {
-  background-color:$beige ;
+  background-color: $beige;
   border-radius: 22px;
   position: relative;
   width: 100%;
   border: 5px solid $red;
   @include mq("md") {
-    border: 16px solid $red;
+    border: 10px solid $red;
     border-radius: 40px;
+  }
+  @include mq("ml") {
+    border: 16px solid $red;
   }
 }
 
-.p-form__wrap{
+.p-form__wrap {
   position: relative;
   z-index: 10;
   display: grid;
   gap: rem(30);
-  padding: rem(20) rem(20) rem(180);
+  padding: rem(32) rem(20) rem(210);
   @include mq(md) {
     align-items: center;
     gap: rem(40);
-    padding: min(vw($full,100),rem(100)) min(vw($full,116),rem(116));
+    padding: min(vw($full, 100), rem(100)) min(vw($full, 116), rem(116));
   }
 }
 
-.p-form__wrap::after{
+.p-form__wrap::after {
   position: absolute;
-  content: '';
-}
-
-.p-form__wrap::after{
+  content: "";
   background-image: url(".././images/contact/form-deco.png");
-  background-size: contain; 
+  background-size: contain;
   background-position: bottom left;
   background-repeat: no-repeat;
   height: 100%;
-  aspect-ratio: 1068/1342;
-  top: 0; 
-  left: 0;
-  width: rem(606);
+  top: 0;
+  left: rem(-1);
+  width: rem(720);
+  aspect-ratio: 650/1345;
   z-index: -1;
   @include mq("md") {
+    aspect-ratio: 1068/1365;
     width: 100%;
-    left:rem(-3);
-
+    left: rem(-3);
   }
 }
 
-
-.p-form__wrap.p-form__wrap--big{
+.p-form__wrap.p-form__wrap--big {
   @include mq("md") {
     gap: rem(85);
   }
 }
 
-.p-form__content{
+.p-form__content {
   @include mq("md") {
-  display: flex;
-  gap: min(vw($full,160),rem(98));
-  align-items: start;
+    display: flex;
+    gap: min(vw($full, 160), rem(98));
+    align-items: start;
   }
 }
 
-.wpcf7-form init{
+.wpcf7-form init {
   display: grid;
-  gap: min(vw($full,40),rem(40));
+  gap: min(vw($full, 40), rem(40));
 }
 
 .p-form__head {
@@ -74,23 +73,28 @@
   gap: rem(10);
   @include mq(md) {
     width: 100%;
-    max-width: min(vw($full,226),rem(226));
-    gap: min(vw($full,22),rem(22));
-    padding-top: min(vw($full,17),rem(17)); 
+    max-width: min(vw($full, 226), rem(226));
+    gap: min(vw($full, 22), rem(22));
+  }
+}
+
+.p-form__content:not(:first-child) .p-form__head {
+  @include mq("md") {
+    padding-top: min(vw($full, 17), rem(17));
   }
 }
 
 .p-form__title {
   font-weight: $bold;
   cursor: pointer;
-  font-size: rem(14);
+  font-size: rem(16);
   @include mq(md) {
     width: 100%;
-    max-width: min(vw($full,160),rem(160));
-    font-size: min(vw($full,20),rem(20));
+    max-width: min(vw($full, 160), rem(160));
+    font-size: max(min(vw($full, 20), rem(20)), 14px);
     display: block;
     font-weight: $medium;
-    line-height: 20px; 
+    line-height: 20px;
     white-space: nowrap;
   }
 }
@@ -114,30 +118,30 @@
 }
 
 .p-form__add.p-form__add--any {
-  border: 1px solid #A3A3A3;
-  background: #A3A3A3;
+  border: 1px solid #a3a3a3;
+  background: #a3a3a3;
 }
 
 .p-form__item {
   margin-top: rem(10);
   @include mq(md) {
     width: 100%;
-    max-width: min(vw($full,800),rem(800));
+    max-width: min(vw($full, 800), rem(800));
     margin-top: 0;
   }
 }
 
 .p-form__item-post {
   position: relative;
-  padding-left: rem(16);
+  padding-left: rem(24);
   @include mq("md") {
     padding-left: rem(26);
   }
 }
 
-.p-form__item-margin{
+.p-form__item-margin {
   @include mq("md") {
-    padding-top: min(vw($full,17),rem(17)); 
+    padding-top: min(vw($full, 17), rem(17));
   }
 }
 
@@ -154,28 +158,29 @@
   }
 }
 
-.p-form__item-attention{
+.p-form__item-attention {
   display: grid;
   gap: rem(6);
 }
 
-.p-form__attention{
+.p-form__attention {
   font-weight: $medium;
   white-space: nowrap;
   font-size: rem(12);
+  margin-top: rem(3);
   @include mq("md") {
     font-size: rem(16);
   }
 }
 
-.p-form__text-small{
-  width: rem(154);
+.p-form__text-small {
+  width: rem(160);
   border-radius: 5px;
-  border: 1px solid #C7C7C7;
-  background:$white ;
-  padding: rem(10) rem(10) rem(10) 0;
+  border: 1px solid #c7c7c7;
+  background: $white;
+  padding: rem(10) rem(10) rem(10) rem(5);
   @include mq("md") {
-    padding: rem(17) rem(16) rem(17) 0;
+    padding: rem(17) rem(16) rem(17) rem(5);
   }
 }
 
@@ -184,12 +189,12 @@
   padding: rem(10);
   font-size: rem(16);
   border-radius: 5px;
-  border: 1px solid #C7C7C7;
-  background: $white;  
+  border: 1px solid #c7c7c7;
+  background: $white;
   transition: all 0.3s;
   @include mq(md) {
     padding: rem(12);
-    font-size: rem(20);
+    font-size: max(min(vw($full, 20), rem(20)), 14px);
   }
 }
 
@@ -203,14 +208,14 @@
   padding: rem(10) rem(10);
   font-size: rem(16);
   border-radius: 5px;
-  border: 1px solid #C7C7C7;
+  border: 1px solid #c7c7c7;
   background: $white;
   line-height: 1.4;
   transition: all 0.3s;
-    @include mq(md) {
-    height: min(vw($full,296),rem(296));
-    font-size: min(vw($full,20),rem(20));
-    padding: min(vw($full,18),rem(18));
+  @include mq(md) {
+    height: min(vw($full, 296), rem(296));
+    font-size: max(min(vw($full, 20), rem(20)), 14px);
+    padding: min(vw($full, 18), rem(18));
   }
 }
 
@@ -223,48 +228,52 @@
   }
 }
 
-[type=radio] + span {
-    cursor: pointer;
-    display: inline-block;
-    font-size: 14px;
-    line-height: 1;
-    margin: 0 rem(40) 0 0;
-    padding: 0 0 0 rem(30);
-    position: relative;
+[type="radio"] + span {
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  margin: 0 rem(40) 0 0;
+  padding: 0 0 0 rem(30);
+  position: relative;
+  font-size: rem(16);
+  @include mq("md") {
+    font-size: rem(20);
+    margin: 0;
+  }
 }
 
-[type=radio] + span::before {
-    background: #fff;
-    border: 1px solid #1391E6;
-    border-radius: 50%;
-    content: "";
-    display: block;
-    height: rem(22);
-    left: 0;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    width: rem(22);
+[type="radio"] + span::before {
+  background: #fff;
+  border: 1px solid #c7c7c7;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: rem(22);
+  left: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: rem(22);
 }
 
-[type=radio]:checked + span::after {
-    background: #1391E6;
-    border-radius: 50%;
-    content: "";
-    display: block;
-    height: rem(10);
-    opacity: 1;
-    position: absolute;
-    top: 50%;
-    left: rem(6);
-    -webkit-transform: translateY(-50%);
-    transform: translatey(-50%);
-    width: rem(10);
+[type="radio"]:checked + span::after {
+  background: $red;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: rem(10);
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: rem(6);
+  -webkit-transform: translateY(-50%);
+  transform: translatey(-50%);
+  width: rem(10);
 }
 
 .p-form__radio span:nth-child(1) label,
-.p-form__radio span:nth-child(2) label{
+.p-form__radio span:nth-child(2) label {
   @include mq("mm") {
     margin-bottom: rem(27);
   }
@@ -272,38 +281,43 @@
 
 .p-form__radio span:nth-child(1) label,
 .p-form__radio span:nth-child(2) label,
-.p-form__radio span:nth-child(3) label{
+.p-form__radio span:nth-child(3) label {
   margin-bottom: rem(10);
 }
 
-.p-form__radio span:nth-child(3) label{
+.p-form__radio span:nth-child(3) label {
   @include mq("md") {
     margin-bottom: 0;
   }
 }
 
-
-input::placeholder,
-textarea::placeholder {
-  color: #C7C7C7;
-  line-height: 1; 
-  font-size: rem(14);
+.p-form__radio span:nth-child(1) label,
+.p-form__radio span:nth-child(3) label {
   @include mq("md") {
-    font-size: rem(20);
+    margin-right: rem(25);
   }
 }
 
+input::placeholder,
+textarea::placeholder {
+  color: #c7c7c7;
+  line-height: 1;
+  @include mq("md") {
+    font-size: max(min(vw($full, 20), rem(20)), 14px);
+    line-height: 1.4;
+  }
+}
 
-.wpcf7-list-item-label{
+.wpcf7-list-item-label {
   text-align: center;
   font-size: rem(20);
   font-weight: $medium;
-  line-height: 1.6; 
+  line-height: 1.6;
   letter-spacing: 0.8px;
   position: relative;
 }
 
-.wpcf7-list-item label{
+.wpcf7-list-item label {
   display: flex;
   justify-content: center;
   margin-inline: auto;
@@ -313,6 +327,11 @@ textarea::placeholder {
   }
 }
 
+.wpcf7-list-item {
+  @include mq("md") {
+    margin: 0;
+  }
+}
 
 .p-form__btn {
   display: flex;
@@ -331,7 +350,7 @@ textarea::placeholder {
   }
 }
 
-.p-form__btns{
+.p-form__btns {
   display: grid;
   margin-inline: auto;
   gap: rem(20);
@@ -340,11 +359,11 @@ textarea::placeholder {
   }
 }
 
-.wpcf7-spinner{
+.wpcf7-spinner {
   display: none;
 }
 
-.p-form__consent{
+.p-form__consent {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -353,20 +372,20 @@ textarea::placeholder {
 // /////////////////////////////////
 // チェックボックス
 
-input[type=checkbox]{
+input[type="checkbox"] {
   display: block;
   width: rem(21);
   height: rem(19);
   border-radius: 2px;
-  border: 1px solid #BCBCBC;
+  border: 1px solid #bcbcbc;
   background: $white;
   @include mq("md") {
-    width: min(vw($full,18),rem(18));
-    height: min(vw($full,18),rem(18));
+    width: min(vw($full, 18), rem(18));
+    height: min(vw($full, 18), rem(18));
   }
 }
 
-input[type=checkbox] + span::before{
+input[type="checkbox"] + span::before {
   border-bottom: 3px solid $black;
   border-left: 3px solid $black;
   content: "";
@@ -380,23 +399,22 @@ input[type=checkbox] + span::before{
   width: rem(17);
   height: rem(9);
   @include mq(md) {
-    left: min(vw($full,-18),rem(-18));
-    width: min(vw($full,21),rem(21));
-    height: min(vw($full,12),rem(12));
+    left: min(vw($full, -18), rem(-18));
+    width: min(vw($full, 21), rem(21));
+    height: min(vw($full, 12), rem(12));
   }
 }
 
-input[type=checkbox]:checked + span::before {
+input[type="checkbox"]:checked + span::before {
   opacity: 1;
 }
 
-
-[type=checkbox] + span a{
+[type="checkbox"] + span a {
   display: inline-block;
-  color: #0090E1;
+  color: #0090e1;
   font-style: normal;
   font-weight: $medium;
-  line-height: 1.6; 
+  line-height: 1.6;
   font-size: rem(14);
   @include mq("md") {
     font-size: rem(18);
@@ -416,14 +434,7 @@ input[type=checkbox]:checked + span::before {
   }
 }
 
-
 .p-form__privacy {
   text-align: center;
   margin-top: rem(5);
 }
-
-
-
-
-
-

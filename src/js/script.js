@@ -118,58 +118,62 @@ jQuery(function ($) {
   });
 
   // voice swiper
-  var swiper = new Swiper(".p-voice-swiper", {
-    loop: true,
-    speed: 1500,
-    slidesPerView: 1.34,
-    spaceBetween: 14,
-    centeredSlides: true,
-    breakpoints: {
-      400: {
-        slidesPerView: 1.5,
-        spaceBetween: 16,
-        centeredSlides: true
-      },
-      500: {
-        slidesPerView: 1.7,
-        spaceBetween: 16,
-        centeredSlides: true
-      },
-      600: {
-        slidesPerView: 1.9,
-        spaceBetween: 16,
-        centeredSlides: true
-      },
-      700: {
-        slidesPerView: 2.3,
-        spaceBetween: 16,
-        centeredSlides: true
-      },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 16,
-        centeredSlides: true
-      },
-      900: {
-        slidesPerView: 3.1,
-        spaceBetween: 32,
-        centeredSlides: false
-      },
-      1440: {
-        slidesPerView: 3,
-        spaceBetween: 52,
-        centeredSlides: false
-      }
+var swiper = new Swiper(".p-voice-swiper", {
+  loop: true,
+  speed: 1500,
+  slidesPerView: 1.34,
+  spaceBetween: 14,
+  centeredSlides: true,
+  autoplay: {
+    delay: 5000, 
+    disableOnInteraction: false 
+  },
+  breakpoints: {
+    400: {
+      slidesPerView: 1.5,
+      spaceBetween: 16,
+      centeredSlides: true
     },
-    pagination: {
-      el: ".p-voice-swiper-pagination",
-      clickable: true
+    500: {
+      slidesPerView: 1.7,
+      spaceBetween: 16,
+      centeredSlides: true
     },
-    navigation: {
-      nextEl: ".p-voice-swiper-button-next",
-      prevEl: ".p-voice-swiper-button-prev"
+    600: {
+      slidesPerView: 1.9,
+      spaceBetween: 16,
+      centeredSlides: true
+    },
+    700: {
+      slidesPerView: 2.3,
+      spaceBetween: 16,
+      centeredSlides: true
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 16,
+      centeredSlides: true
+    },
+    900: {
+      slidesPerView: 3.1,
+      spaceBetween: 32,
+      centeredSlides: false
+    },
+    1440: {
+      slidesPerView: 3,
+      spaceBetween: 52,
+      centeredSlides: false
     }
-  });
+  },
+  pagination: {
+    el: ".p-voice-swiper-pagination",
+    clickable: true
+  },
+  navigation: {
+    nextEl: ".p-voice-swiper-button-next",
+    prevEl: ".p-voice-swiper-button-prev"
+  }
+});
 
   // 果物モーダル
   var openButtons = document.querySelectorAll('.js-open');
@@ -277,26 +281,6 @@ jQuery(function ($) {
     });
   });
 
-  // about dropdown
-  var dropdownTrigger = document.querySelector('.js-dropdown-trigger');
-  var dropdownContent = document.querySelector('.p-about-dropdown__content');
-
-  if (dropdownTrigger && dropdownContent) {
-    dropdownTrigger.addEventListener('click', function(event) {
-      event.stopPropagation();
-      dropdownContent.classList.toggle('show');
-    });
-
-    document.addEventListener('click', function(event) {
-      if (!event.target.matches('.js-dropdown-trigger')) {
-        if (dropdownContent.classList.contains('show')) {
-          dropdownContent.classList.remove('show');
-        }
-      }
-    });
-  }
-
-
 // 表示アニメーション
   $(document).ready(function () {
     function getElementOffsetAndHeight() {
@@ -332,5 +316,6 @@ jQuery(function ($) {
 
     checkAndFadeIn();
   });
+
 
 });

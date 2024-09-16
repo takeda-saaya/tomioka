@@ -54,20 +54,20 @@
             <li class="p-pc-nav__item"><a href="<?php echo esc_url(home_url('/')); ?>">トップ</a></li>
             <li class="p-pc-nav__item"><a href="<?php echo esc_url(home_url('/about')); ?>">私たちについて</a></li>
             <li class="p-pc-nav__item p-pc-nav__item-dropdown p-dropdown">
-              <a href="#" class="p-dropdown-toggle">サービス</a>
+              <div class="p-dropdown-toggle">サービス</div>
               <ul class="p-dropdown-menu">
                 <li class="p-dropdown__trigger">
-                  <a href="<?php echo home_url(); ?>#sales">直売</a>
+                  <a href="#sales">直売</a>
                 </li>
                 <li class="p-dropdown__trigger">
-                  <a href="<?php echo home_url(); ?>#experience">もぎ取り体験</a>
+                  <a href="#experience">もぎ取り体験</a>
                 </li>
                 <li class="p-dropdown__trigger">
-                  <a href="<?php echo home_url(); ?>#delivery">配送</a>
+                  <a href="#delivery">配送</a>
                 </li>
               </ul>
             </li>
-            <li class="p-pc-nav__item"><a href="<?php echo esc_url(get_post_type_archive_link('fruits')); ?>">果物一覧</a></li>
+            <li class="p-pc-nav__item"><a href="<?php echo esc_url(get_post_type_archive_link('fruits-list')); ?>">果物一覧</a></li>
             <li class="p-pc-nav__item"><a href="<?php echo esc_url(home_url('/news')); ?>">お知らせ</a></li>
             <li class="p-pc-nav__btn">
               <a href="<?php echo esc_url(home_url('/contact')); ?>" class="c-header-btn c-header-btn--red">
@@ -95,24 +95,34 @@
         <nav class="p-header__sp-nav p-sp-nav" id="js-sp-nav" aria-hidden="true">
           <ul class="p-sp-nav__items">
             <li class="p-sp-nav__item">
-              <a href="<?php echo esc_url(home_url('/about')); ?>">私たちについて</a>
-              <a href="<?php echo esc_url(home_url('/about')); ?>">about</a>
+              <a href="<?php echo esc_url(home_url('/about')); ?>">
+                <p>私たちについて</p>
+                <p>about</p>
+              </a>
             </li>
             <li class="p-sp-nav__item">
-              <a href="<?php echo esc_url(home_url('/about/#access')); ?>">アクセス</a>
-              <a href="<?php echo esc_url(home_url('/about/#access')); ?>">access</a>
-            </li>
-            <li class="p-sp-nav__item p-pc-nav__item-dropdown p-dropdown">
-              <a href="<?php echo home_url('/#service'); ?>" class="p-dropdown-toggle">サービス</a>
-              <a href="<?php echo home_url('/#service'); ?>" class="p-dropdown-toggle">service</a>
+              <a href="<?php echo esc_url(home_url('/about/#access')); ?>">
+                <p>アクセス</p>
+                <p>access</p>
+              </a>
             </li>
             <li class="p-sp-nav__item">
-              <a href="<?php echo esc_url(home_url('/news')); ?>">お知らせ</a>
-              <a href="<?php echo esc_url(home_url('/news')); ?>">news</a>
+              <a href="<?php echo home_url('/#service'); ?>">
+                <p>サービス</p>
+                <p>service</p>
+              </a>
             </li>
             <li class="p-sp-nav__item">
-              <a href="<?php echo esc_url(get_post_type_archive_link('fruits')); ?>">果物一覧</a>
-              <a href="<?php echo esc_url(get_post_type_archive_link('fruits')); ?>">fruit list</a>
+              <a href="<?php echo esc_url(home_url('/news')); ?>">
+                <p>お知らせ</p>
+                <p>news</p>
+              </a>
+            </li>
+            <li class="p-sp-nav__item">
+              <a href="<?php echo esc_url(get_post_type_archive_link('fruits-list')); ?>">
+                <p>果物一覧</p>
+                <p>fruit list</p>
+              </a>
             </li>
           </ul>
           <div class="p-sp-nav__btn">

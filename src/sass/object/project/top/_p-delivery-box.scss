@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.p-delivery-box{
+.p-delivery-box {
   display: grid;
   align-items: start;
   border-radius: 40px;
@@ -8,16 +8,16 @@
   box-shadow: -7px 8px 8px 0px rgba(195, 146, 94, 0.04);
   padding: rem(40) rem(20);
   @include mq("md") {
-  grid-auto-flow: column;
-  gap: rem(56);
-  padding: rem(46) rem(57) rem(44)rem(40);
+    grid-auto-flow: column;
+    gap: rem(56);
+    padding: rem(46) rem(57) rem(44) rem(40);
   }
 }
 
-.p-delivery-box__title{
+.p-delivery-box__title {
   font-size: rem(30);
   font-family: $second-font-family;
-  line-height: 1; 
+  line-height: 1;
   letter-spacing: 0.84px;
   width: rem(289);
   white-space: nowrap;
@@ -26,7 +26,7 @@
   }
 }
 
-.p-delivery-box__text-wrap{
+.p-delivery-box__text-wrap {
   margin-top: rem(40);
   @include mq("md") {
     display: grid;
@@ -35,32 +35,33 @@
   }
 }
 
-.p-delivery-box__text-box{
+.p-delivery-box__text-box {
   display: flex;
   gap: rem(14);
-  align-items: start;
+  align-items: center;
 }
 
-.p-delivery-box__namber{
+.p-delivery-box__namber {
   flex-shrink: 0;
   width: rem(35);
   height: auto;
 }
 
-.p-delivery-box__namber img{
+.p-delivery-box__namber img {
   object-fit: contain;
 }
 
-.p-delivery-box__text{
-  line-height: 1.8; 
+.p-delivery-box__text {
+  line-height: 1.8;
   letter-spacing: 0.32px;
 }
 
-.p-delivery-box__text span{
+.p-delivery-box__text span {
   color: $red;
+  font-weight: $bold;
 }
 
-.p-delivery-modal__btns{
+.p-delivery-modal__btns {
   display: flex;
   flex-direction: column;
   align-items: center;

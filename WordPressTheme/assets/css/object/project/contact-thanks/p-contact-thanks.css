@@ -7,7 +7,6 @@ body {
 	background-color: #fff;
 	color: #000;
 	font-family: "Noto Sans JP", sans-serif;
-	font-size: 16px;
 	font-size: 1rem;
 	font-style: normal;
 	font-weight: 400;
@@ -17,12 +16,7 @@ body.modal-open {
 	overflow: hidden;
 }
 
-html {
-	scroll-padding-top: 2.75rem;
-}
-
 .p-contact-thanks {
-	padding-bottom: 60px;
 	padding-bottom: 3.75rem;
 }
 
@@ -33,7 +27,7 @@ html {
 @media screen and (min-width: 768px) {
 
 html {
-	scroll-padding-top: 3.75rem;
+	scroll-padding-top: 2.5rem;
 }
 
 .p-contact-thanks {

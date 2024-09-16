@@ -1,5 +1,8 @@
 @use "global" as *;
 
-.l-archive-pagenave{
-  margin-top: rem(105);
+.l-archive-pagenave {
+  margin-top: rem(80);
+  @include mq("md") {
+    margin-top: rem(105);
+  }
 }
